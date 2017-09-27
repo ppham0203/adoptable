@@ -6,7 +6,7 @@ const Nav = () => (
     <div className="container-fluid">
       <div className="navbar-header">
         <a href="/index.html" className="navbar-brand">
-          Adoptable
+          Create Account
         </a>
       </div>
     </div>

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Input from "./components/Input";
-import Button from "./components/Button";
+import Jumbotron from "./components/Index/Jumbotron";
+import Nav from "./components/Index/Nav";
+import Input from "./components/Index/Input";
+import Button from "./components/Index/Button";
 import API from "./utils/API";
-import { RecipeList, RecipeListItem } from "./components/RecipeList";
-import { Container, Row, Col } from "./components/Grid";
+import { RecipeList, RecipeListItem } from "./components/Index/RecipeList";
+import { Container, Row, Col } from "./components/Index/Grid";
 
 class App extends Component {
   state = {
@@ -43,10 +43,10 @@ class App extends Component {
                   <Row>
                     <Col size="xs-9 sm-10">
                       <Input
-                        name="recipeSearch"
-                        value={this.state.recipeSearch}
+                        name="petSearch"
+                        value={this.state.petSearch}
                         onChange={this.handleInputChange}
-                        placeholder="Search For a Recipe"
+                        placeholder="Zip Code"
                       />
                     </Col>
                     <Col size="xs-3 sm-2">

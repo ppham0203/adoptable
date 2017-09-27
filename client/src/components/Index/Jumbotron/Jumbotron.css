@@ -1,7 +1,7 @@
 .jumbotron {
   min-height: 300px;
   padding-top: 75px;
-  background-image: url("../../assets/images/dogsandcats.png");
+  background-image: url("../../../assets/images/dogsandcats.png");
   background-position: bottom;
   background-repeat: repeat-x;
   opacity: 0.9;
@@ -10,5 +10,5 @@ div.jumbotron h4 {
 	color: #eb6864;
 }
 div.jumbotron h1 {
-	margin-top: -63px;
+	margin-top: -52px;
 }

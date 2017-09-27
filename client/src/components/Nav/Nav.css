@@ -1,3 +1,9 @@
 nav.navbar {
   margin-bottom: 0;
 }
+a.navbar-brand {
+	padding-left: 44%;
+}
+h4 {
+	color: #eb6864;
+}

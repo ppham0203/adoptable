@@ -126,14 +126,14 @@ const bookSeed = [
   }
 ];
 
-db.Book
-  .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
-  .then(data => {
-    console.log(data.insertedIds.length + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+// db.pet
+//   .remove({})
+//   .then(() => db.pet.collection.insertMany(bookSeed))
+//   .then(data => {
+//     console.log(data.insertedIds.length + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });

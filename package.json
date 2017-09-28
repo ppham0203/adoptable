@@ -20,9 +20,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
+<<<<<<< HEAD
     "cheerio": "^1.0.0-rc.2",
+=======
+    "eslint-plugin-react": "^7.4.0",
+>>>>>>> 3e86ac98eacadc2d85eff7ec158da460512e11cb
     "express": "^4.15.4",
     "mongoose": "^4.11.13",
+    "react-bootstrap": "^0.31.3",
     "react-router-dom": "^4.2.2"
   }
 }

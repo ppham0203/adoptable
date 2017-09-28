@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import Jumbotron from "./components/Jumbotron";
 import Nav from "./components/Nav";
@@ -91,5 +92,24 @@ class App extends Component {
     );
   }
 }
+=======
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import homepage from "./pages/homepage";
+import adoptionpage from "./pages/adoptionPage";
+import petresults from "./pages/petresults";
+import petprofile from "./pages/petprofile";
+>>>>>>> 3e86ac98eacadc2d85eff7ec158da460512e11cb
 
+const App = () =>
+  <Router>
+    <div>
+      <Route exact path="/" component={homepage} />
+      <Route exact path="/adoptionpage" component={adoptionpage} />
+      <Route exact path="/petprofile" component={petprofile} />
+      <Route exact path="/petresults" component={petresults} />
+      
+    </div>
+  </Router>;
+  
 export default App;

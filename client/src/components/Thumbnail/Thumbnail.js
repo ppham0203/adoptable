@@ -8,7 +8,7 @@ const Thumbnail = props => (
   <div
     className="thumbnail"
     role="img"
-    aria-label="Recipe Image"
+    aria-label="Pet Image"
     style={{
       backgroundImage: `url(${props.src})`
     }}

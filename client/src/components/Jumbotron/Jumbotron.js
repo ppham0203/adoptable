@@ -3,14 +3,10 @@ import "./Jumbotron.css";
 
 const Jumbotron = () => (
   <div className="jumbotron text-center">
-    <h1>React Recipes</h1>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="http://www.recipepuppy.com/about/api/"
-    >
-      Powered by Recipe Puppy
-    </a>
+    <a href="/"><h1>Adoptable</h1></a>
+    <h4>
+      Streamlining the adoption process one pet at a time.
+    </h4>
   </div>
 );
 

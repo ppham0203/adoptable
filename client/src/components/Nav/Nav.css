@@ -2,5 +2,5 @@ nav.navbar {
 	margin-bottom: 0;
 }
 a.navbar-brand {
-	padding-left: 41%;
+	float: left;
 }

@@ -5,8 +5,8 @@ const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
     <div className="container-fluid">
       <div className="navbar-header">
-        <a href="/index.html" className="navbar-brand">
-          Create Account
+        <a href="/" className="navbar-brand">
+          Create Account / Log In
         </a>
       </div>
     </div>

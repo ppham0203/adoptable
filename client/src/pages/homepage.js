@@ -5,19 +5,19 @@ import Input from "../components/Input";
 import Button from 'react-bootstrap/lib/Button';
 import DropdownButton from "react-bootstrap/lib/DropdownButton";
 import MenuItem from "react-bootstrap/lib/MenuItem";
+import Modal from "react-bootstrap/lib/Modal";
 import API from "../utils/API";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import { Container, Row, Col } from "../components/Grid";
 
 class App extends Component {
   state = {
-    recipes: [],
-    recipeSearch: ""
+    pets: [],
+    petSearch: ""
   };
 
   handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
+
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -25,10 +25,10 @@ class App extends Component {
   };
 
   handleFormSubmit = event => {
-    // When the form is submitted, prevent its default behavior, get recipes update the recipes state
+
     event.preventDefault();
-    API.getRecipes(this.state.recipeSearch)
-      .then(res => this.setState({ recipes: res.data }))
+    API.getRecipes(this.state.petSearch)
+      .then(res => this.setState({ pets: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -37,12 +37,31 @@ class App extends Component {
       <div>
         <Nav />
         <Jumbotron />
+        <div class="static-modal">
+          <Modal.Dialog>
+            <Modal.Header>
+              <Modal.Title>Create Account</Modal.Title>
+            </Modal.Header>
+
+            <Modal.Body>
+              One fine body...
+            </Modal.Body>
+
+            <Modal.Footer>
+              <Button>Close</Button>
+              <Button bsStyle="primary">Save changes</Button>
+            </Modal.Footer>
+
+          </Modal.Dialog>
+        </div>
         <Container>
           <Row>
             <Col size="md-12">
               <form>
                 <Container>
                   <Row>
+                    <Col size="xs-0 sm-2">
+                    </Col>
                     <Col size="xs-9 sm-4">
                       <Input
                         name="petSearch"
@@ -58,9 +77,12 @@ class App extends Component {
                       <MenuItem eventKey="3">Shih Tsu</MenuItem>
                       <MenuItem eventKey="4">Terrier</MenuItem>
                     </DropdownButton>
-                    </Col>
-                    <Col size="xs-3 sm-2">
+                    <DropdownButton bsSize="large" title="Gender" id="dropdown-size-large">
+                      <MenuItem eventKey="1">Male</MenuItem>
+                      <MenuItem eventKey="2">Female</MenuItem>
+                    </DropdownButton>
                       <Button
+                        bsSize="large" 
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
@@ -75,18 +97,17 @@ class App extends Component {
           </Row>
           <Row>
             <Col size="xs-12">
-              {!this.state.recipes.length ? (
+              {!this.state.pets.length ? (
                 <h1 className="text-center">No Pets to Display</h1>
               ) : (
                 <RecipeList>
-                  {this.state.recipes.map(recipe => {
+                  {this.state.pets.map(pet => {
                     return (
                       <RecipeListItem
-                        key={recipe.title}
-                        title={recipe.title}
-                        href={recipe.href}
-                        ingredients={recipe.ingredients}
-                        thumbnail={recipe.thumbnail}
+                        key={pet.title}
+                        title={pet.title}
+                        href={pet.href}
+                        thumbnail={pet.thumbnail}
                       />
                     );
                   })}
@@ -96,7 +117,8 @@ class App extends Component {
           </Row>
         </Container>
       </div>
-    );
+
+    ); 
   }
 }
 

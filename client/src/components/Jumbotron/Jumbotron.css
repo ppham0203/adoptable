@@ -12,3 +12,9 @@ div.jumbotron h4 {
 div.jumbotron h1 {
 	margin-top: -65px;
 }
+
+.btn-lg, .btn-group-lg>.btn {
+	background-color: #eb6864;
+	margin-right: 10px;
+	border-color: #eb6864;
+};

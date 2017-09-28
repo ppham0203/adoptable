@@ -6,7 +6,7 @@ const Nav = () => (
     <div className="container-fluid">
       <div className="navbar-header">
         <a href="/" className="navbar-brand">
-          Create Account / Log In
+         Log In / Create Account 
         </a>
       </div>
     </div>

@@ -35,25 +35,38 @@ class App extends Component {
   render() {
     return (
       <div>
+      <div className="static-modal hidden">
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>Log In</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+             <Col size="xs-9 sm-4">
+                <Input
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleInputChange}
+                  placeholder="Username"
+                />
+                <Input
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                  placeholder="Password"
+                />
+              </Col>
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button>Close</Button>
+            <Button bsStyle="primary">Save changes</Button>
+          </Modal.Footer>
+
+        </Modal.Dialog>
+      </div>
         <Nav />
         <Jumbotron />
-        <div class="static-modal">
-          <Modal.Dialog>
-            <Modal.Header>
-              <Modal.Title>Create Account</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-              One fine body...
-            </Modal.Body>
-
-            <Modal.Footer>
-              <Button>Close</Button>
-              <Button bsStyle="primary">Save changes</Button>
-            </Modal.Footer>
-
-          </Modal.Dialog>
-        </div>
         <Container>
           <Row>
             <Col size="md-12">

@@ -10,7 +10,7 @@ const Nav = () => (
       <div className="navbar-header">
         <div className="navbar-brand">
 	      <GoogleLogin className="google"
-		    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+		    clientId="202041517557-vaub2sonoel9t658dk81dj0hh5qj9lru.apps.googleusercontent.com"
 		    buttonText="Login"
 		    onSuccess={responseGoogle}
 		    onFailure={responseGoogle}

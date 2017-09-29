@@ -1,20 +1,14 @@
 import React from "react";
-import DropdownButton 
+import DropdownButton from "react-bootstrap/lib/DropdownButton";
+import MenuItem from "react-bootstrap/lib/MenuItem";
 const breeds = ["boxer", "chihuaha"];
 
-const Dropdown = (breedArr) => {  
-	for (i = 0; i < breedArr.length; i++) {
-		$.each(breedArr, function (i, value) {
-			<MenuItem eventKey= i>value</MenuItem>
-		});
-	}
-};
 
-const Dropdown = ({breeds}) => (
+const Dropdown = ({arr}) => (
   <div>
     {breeds.map(breeds => (
-      <div className="breeds" key={station.call}>{station.call}</div>
-      <MenuItem eventKey="1">Chihuahua</MenuItem>
+      <div className="breeds" key={breeds.index}></div>
+      <MenuItem eventKey="1">{breeds.index}</MenuItem>
     ))}
   </div>
 ); 

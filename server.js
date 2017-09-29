@@ -3,9 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes/scraperoutes");
-const logger = require("morgan");
 const app = express();
-app.use(logger("dev"));
 // scraping tools
 var request = require("request");
 var cheerio = require("cheerio");

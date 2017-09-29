@@ -94,6 +94,20 @@ router.get("/scrape", function(req, res) {
   
 
 
+// This will get the articles we scraped from the mongoDB
+router.get("/results", function(req, res) {
+  // Grab every doc in the Articles array
+  pet.find({}, function(error, docs) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    // Or send the doc to the browser as a json object
+    else {
+      res.json(docs);
+    }
+  });
+});
 
 
   module.exports = router;

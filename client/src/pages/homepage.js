@@ -9,6 +9,8 @@ import Modal from "react-bootstrap/lib/Modal";
 import API from "../utils/API";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import { Container, Row, Col } from "../components/Grid";
+import { Link, Route } from "react-router-dom";
+
 
 class App extends Component {
   state = {
@@ -26,6 +28,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
 
+   
     event.preventDefault();
     API.getRecipes(this.state.petSearch)
       .then(res => this.setState({ pets: res.data }))
@@ -35,36 +38,6 @@ class App extends Component {
   render() {
     return (
       <div>
-      <div className="static-modal hidden">
-        <Modal.Dialog>
-          <Modal.Header>
-            <Modal.Title>Log In</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-             <Col size="xs-9 sm-4">
-                <Input
-                  name="username"
-                  value={this.state.username}
-                  onChange={this.handleInputChange}
-                  placeholder="Username"
-                />
-                <Input
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleInputChange}
-                  placeholder="Password"
-                />
-              </Col>
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button>Close</Button>
-            <Button bsStyle="primary">Save changes</Button>
-          </Modal.Footer>
-
-        </Modal.Dialog>
-      </div>
         <Nav />
         <Jumbotron />
         <Container>
@@ -96,11 +69,12 @@ class App extends Component {
                     </DropdownButton>
                       <Button
                         bsSize="large" 
+                        title="Search"
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
                       >
-                        Search
+                      <Link to="/petresults">Search</Link>
                       </Button>
                     </Col>
                   </Row>

@@ -8,7 +8,6 @@ import { Container, Row, Col } from "../components/Grid";
 class Adoption extends Component {
   state = {
     pets: [],
-    image: "",
     name: "",
     gender: "",
     age: "",
@@ -25,11 +24,18 @@ class Adoption extends Component {
   };
 
   handleFormSubmit = event => {
-
     event.preventDefault();
-    API.getRecipes(this.state.petSearch)
-      .then(res => this.setState({ pets: res.data }))
-      .catch(err => console.log(err));
+    if (this.state.name && this.state.gender) {
+      API.savePet({
+        name: this.state.name,
+        gender: this.state.gender,
+        age: this.state.age,
+        weight: this.state.weight,
+        breed: this.state.breed,
+      })
+        .then(res => this.loadBooks())
+        .catch(err => console.log(err));
+    }
   };
 
   render() {
@@ -57,31 +63,26 @@ class Adoption extends Component {
                   <h3>Submit your pets information here and we will find them a forever home:</h3>
                     <Col size="md-4">
                       <Input
-                        name="name"
                         value={this.state.name}
                         onChange={this.handleInputChange}
                         placeholder="Name"
                       />
                       <Input
-                        name="gender"
                         value={this.state.gender}
                         onChange={this.handleInputChange}
                         placeholder="Gender"
                       />
                       <Input
-                        name="age"
                         value={this.state.age}
                         onChange={this.handleInputChange}
                         placeholder="Age"
                       />
                       <Input
-                        name="weight"
                         value={this.state.weight}
                         onChange={this.handleInputChange}
                         placeholder="Weight"
                       />
                       <Input
-                        name="breed"
                         value={this.state.breed}
                         onChange={this.handleInputChange}
                         placeholder="Breed"

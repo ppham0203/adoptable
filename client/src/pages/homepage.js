@@ -9,6 +9,8 @@ import Modal from "react-bootstrap/lib/Modal";
 import API from "../utils/API";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import { Container, Row, Col } from "../components/Grid";
+import { Link, Route } from "react-router-dom";
+
 
 class App extends Component {
   state = {
@@ -26,6 +28,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
 
+   
     event.preventDefault();
     API.getRecipes(this.state.petSearch)
       .then(res => this.setState({ pets: res.data }))
@@ -96,11 +99,12 @@ class App extends Component {
                     </DropdownButton>
                       <Button
                         bsSize="large" 
+                        title="Search"
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
                       >
-                        Search
+                      <Link to="/petresults">Search</Link>
                       </Button>
                     </Col>
                   </Row>

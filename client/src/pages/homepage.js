@@ -82,26 +82,7 @@ class App extends Component {
               </form>
             </Col>
           </Row>
-          <Row>
-            <Col size="xs-12">
-              {!this.state.pets.length ? (
-                <h1 className="text-center">No Pets to Display</h1>
-              ) : (
-                <RecipeList>
-                  {this.state.pets.map(pet => {
-                    return (
-                      <RecipeListItem
-                        key={pet.title}
-                        title={pet.title}
-                        href={pet.href}
-                        thumbnail={pet.thumbnail}
-                      />
-                    );
-                  })}
-                </RecipeList>
-              )}
-            </Col>
-          </Row>
+         
         </Container>
       </div>
 

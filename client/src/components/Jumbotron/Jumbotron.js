@@ -5,7 +5,7 @@ const Jumbotron = () => (
   <div className="jumbotron text-center">
     <a href="/"><h1>Adoptable</h1></a>
     <h4>
-      Streamlining the adoption process one pet at a time.
+      Pet adoption made easy.
     </h4>
   </div>
 );

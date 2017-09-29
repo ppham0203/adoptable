@@ -48,9 +48,14 @@ class Adoption extends Component {
             <Col size="md-12">
               <form>
                 <Container>
+                <Row>
+                 </Row>
+                  <h2>Approximately 6.5 million companion animals enter U.S. animal shelters nationwide every year.</h2>
+                  <h2>Of that, 1.5 million are euthanized.</h2>
+                  <h2>At Adoptable, we help animals find new homes without the need of ever being placed into shelters.</h2>
                   <Row>
-                    <Col size="xs-9 sm-4">
-                    <h2>Submit your pet information</h2>
+                  <h3>Submit your pets information here and we will find them a forever home:</h3>
+                    <Col size="md-4">
                       <Input
                         name="name"
                         value={this.state.name}
@@ -89,6 +94,11 @@ class Adoption extends Component {
                       >
                         Submit
                       </Button>
+                    </Col>
+                    <Col size="md-4"></Col>
+                    <Col size="md-4">
+                      <iframe width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
+                      </iframe>
                     </Col>
                   </Row>
                 </Container>

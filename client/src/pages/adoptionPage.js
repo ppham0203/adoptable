@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Button from 'react-bootstrap/lib/Button';
 import Hero from "../components/Hero";
+import Nav from "../components/Nav";
 import Input from "../components/Input";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
+
 
 class Adoption extends Component {
   state = {
@@ -41,6 +43,7 @@ class Adoption extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
           <Row>
             <Col size="xs-9 sm-4">

@@ -2,7 +2,6 @@ const axios = require("axios");
 const router = require("express").Router();
 var request = require("request");
 var cheerio = require("cheerio");
-// const pet = require("./../models/newpet.js");
 const pet = require("./../models/newpet.js");
 
 
@@ -19,8 +18,8 @@ router.get("/scrape", function(req, res) {
         // Save an empty result object
         var result = {};
 
-          result.image = $(element).find("a").find("img").attr("src");
-          result.link = $(element).find("a").attr("href");
+          result.image = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").find("img").attr("src")}`;
+          result.link = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").attr("href")}`;
           result.name = $(element).children().eq(1).text();
           result.gender = $(element).children().eq(2).text();
           result.age = $(element).children().eq(3).text();
@@ -108,6 +107,66 @@ router.get("/results", function(req, res) {
     }
   });
 });
+
+
+
+
+
+
+
+
+// // Grab an article by it's ObjectId
+// app.get("/articles/:id", function(req, res) {
+//   // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
+//   Article.findById(req.params.id)
+//   // ..and populate all of the notes associated with it
+//   .populate("note")
+//   // now, execute our query
+//   .exec(function(error, doc) {
+//     // Log any errors
+//     if (error) {
+//       console.log(error);
+//     }
+//     // Otherwise, send the doc to the browser as a json object
+//     else {
+//       res.json(doc);
+//     }
+//   });
+// });
+
+
+// // Create a new note or replace an existing note
+// app.post("/articles/:id", function(req, res) {
+//   // Create a new note and pass the req.body to the entry
+//   var newNote = new Note(req.body);
+
+//   // And save the new note the db
+//   newNote.save(function(error, doc) {
+//     // Log any errors
+//     if (error) {
+//       console.log(error);
+//     }
+//     // Otherwise
+//     else {
+//       // Use the article id to find and update it's note
+//       Article.findOneAndUpdate({ "_id": req.params.id }, { "note": doc._id })
+//       // Execute the above query
+//       .exec(function(err, doc) {
+//         // Log any errors
+//         if (err) {
+//           console.log(err);
+//         }
+//         else {
+//           // Or send the document to the browser
+//           res.send(doc);
+//         }
+//       });
+//     }
+//   });
+// });
+
+
+
 
 
   module.exports = router;

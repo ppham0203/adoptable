@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import Thumbnail from "../components/Thumbnail";
+// import Thumbnail from "../components/Thumbnail";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import { Container, Row, Col } from "../components/Grid";
 
@@ -41,7 +41,7 @@ class App extends Component {
                   <Row>
                     <Col size="xs-9 sm-5">
                       <h2>Placeholder where photo goes</h2>
-                      <Thumbnail />
+                      {/* <Thumbnail /> */}
                     </Col>
                     <Col size="xs-0 sm-1">
                     </Col>

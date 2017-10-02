@@ -1,12 +1,15 @@
 const axios = require("axios");
 const router = require("express").Router();
+const postController = require("../controllers/postController");
 
-router.get("/recipes", (req, res) => {
-  axios
-    .get("http://api.petfinder.com/my.method?key=12345&arg1=foo", { params: req.query })
-    .then(({ data: { results } }) => res.json(results))
-    .catch(err => res.status(422).json(err));
-});
+// Matches with "/api/books"
+router.route("/")
+  .get(postController.findAll)
+  .post(postController.create);
+
+// Matches with "/api/books/:id"
+router
+  .route("/pets/:id")
+  .get(postController.findById)
 
 module.exports = router;
-

@@ -6,6 +6,9 @@ const responseGoogle = (response) => {
 }
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
+      <div className="navbar-brand right">
+        <a href="/signup"><h4 className="postPet">Sign up</h4></a>
+      </div>
       <div className="navbar-header">
         <div className="navbar-brand left">
 	      <GoogleLogin className="google"

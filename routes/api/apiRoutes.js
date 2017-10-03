@@ -1,6 +1,6 @@
 const axios = require("axios");
 const router = require("express").Router();
-const postController = require("../controllers/postController");
+const postController = require("../../controllers/postController");
 
 // Matches with "/api/books"
 router.route("/")
@@ -9,7 +9,11 @@ router.route("/")
 
 // Matches with "/api/books/:id"
 router
-  .route("/pets/:id")
+  .route("/:id")
   .get(postController.findById)
 
+
+
 module.exports = router;
+
+

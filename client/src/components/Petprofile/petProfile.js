@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
 import axios from 'axios';
 import API from '../../utils/API';
 import Nav from "../Nav";
@@ -13,7 +12,7 @@ class Petprofile extends Component {
   // When this component mounts, grab the book with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
-    // axios.get('/api/pets/:id').then( results => {
+    // axios.get('/adoptionPets/:id').then( results => {
         
     //     const dogs = results.data;
     //     console.log("Axios results", results);
@@ -59,12 +58,13 @@ class Petprofile extends Component {
               <li>Age: </li>
               <li><a href="/">Give Dog a home</a></li>
               </ul>
+              <Link to="/">← Back to home</Link>
           </Col>
         </Row>
         <Row>
-          {/* <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
-          </Col> */}
+       
+            
+          
         </Row>
       </Container>
     );

@@ -2,8 +2,9 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes/scraperoutes");
-const postroutes = require("./routes/apiRoutes");
+const routes = require("./routes/api");
+const scrapeRoutes = require("./routes/scraperoutes");
+// const postroutes = require("./routes/api/apiRoutes");
 const app = express();
 
 
@@ -34,8 +35,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use("/api", routes);
-app.use("/pets", postroutes);
+app.use(routes);
+app.use(scrapeRoutes);
 
 
 // Send every request to the React app

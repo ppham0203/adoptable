@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Button from 'react-bootstrap/lib/Button';
 import Hero from "../components/Hero";
+import Nav from "../components/Nav";
 import Input from "../components/Input";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
+import { Link } from "react-router-dom";
 
 class Adoption extends Component {
   state = {
@@ -14,6 +16,21 @@ class Adoption extends Component {
     weight: "",
     breed: ""
   };
+
+
+  componentDidMount() {
+    this.loadBooks();
+  }
+
+  loadBooks = () => {
+    API.getResults()
+      .then(res =>
+        this.setState({ pets: res.data, name: "", gender: "", age: "" })
+      )
+      .catch(err => console.log(err));
+     
+  };
+  
 
   handleInputChange = event => {
 
@@ -41,6 +58,7 @@ class Adoption extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
           <Row>
             <Col size="xs-9 sm-4">
@@ -63,36 +81,45 @@ class Adoption extends Component {
                   <h3>Submit your pets information here and we will find them a forever home:</h3>
                     <Col size="md-4">
                       <Input
+                        name="name"
                         value={this.state.name}
                         onChange={this.handleInputChange}
                         placeholder="Name"
                       />
                       <Input
+                        name="gender"
                         value={this.state.gender}
                         onChange={this.handleInputChange}
                         placeholder="Gender"
                       />
                       <Input
+                        name="age"
                         value={this.state.age}
                         onChange={this.handleInputChange}
                         placeholder="Age"
                       />
                       <Input
+                        name="weight"
                         value={this.state.weight}
                         onChange={this.handleInputChange}
                         placeholder="Weight"
                       />
                       <Input
+                        name="breed"
                         value={this.state.breed}
                         onChange={this.handleInputChange}
                         placeholder="Breed"
                       />
-                      <Button
+                      {/* <Button
+                
                         bsSize="large" 
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
                       >
+                        Submit
+                      </Button> */}
+                      <Button disabled={!(this.state.name && this.state.breed && this.state.gender && this.state.age && this.state.weight)} onClick={this.handleFormSubmit}>
                         Submit
                       </Button>
                     </Col>

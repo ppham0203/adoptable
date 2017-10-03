@@ -2,12 +2,11 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes/scraperoutes");
+const routes = require("./routes/api");
+const scrapeRoutes = require("./routes/scraperoutes");
+// const postroutes = require("./routes/api/apiRoutes");
 const app = express();
-// scraping tools
-var request = require("request");
-var cheerio = require("cheerio");
-// 
+
 
 
 const PORT = process.env.PORT || 3001;
@@ -22,7 +21,7 @@ app.use(express.static("client/build"));
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://localhost/petDB",
   {
     useMongoClient: true
   }
@@ -36,7 +35,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use("/api", routes);
+app.use(routes);
+app.use(scrapeRoutes);
+
 
 // Send every request to the React app
 // Define any API routes before this runs

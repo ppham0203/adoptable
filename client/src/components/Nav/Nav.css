@@ -2,7 +2,7 @@ nav.navbar {
 	margin-bottom: 0;
 }
 a.navbar-brand.left {
-	float: left;
+	float: right;
 	font-size: 23px;
 	font-family: "News Cycle","Arial Narrow Bold",sans-serif;
 }

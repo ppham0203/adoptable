@@ -92,4 +92,5 @@ class User extends Component {
   }
 }
 
+console.log ("hello");
 export default User;

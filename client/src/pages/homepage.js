@@ -20,24 +20,24 @@ class App extends Component {
 
 
   
-  handleInputChange = event => {
+  // handleInputChange = event => {
 
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 
-  handleFormSubmit = event => {
+  // handleFormSubmit = event => {
 
    
-    event.preventDefault();
-    API.getResults(this.state.petSearch)
-      .then(res => this.setState({ pets: res.data }))
-      .catch(err => console.log(err));
+  //   event.preventDefault();
+  //   API.getResults(this.state.petSearch)
+  //     .then(res => this.setState({ pets: res.data }))
+  //     .catch(err => console.log(err));
   
   
-    };
+  //   };
 
 
 

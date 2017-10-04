@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from "../Grid";
 // import Thumbnail from "../Thumbnail";
 import "./doglist.css";
+import { Link } from "react-router-dom";
+
 
 const DogList = (props) => (
 <Container>
@@ -12,11 +14,14 @@ const DogList = (props) => (
       <div key={item._id}>
       <Col size="xs-4 sm-4">
       <div className='panel-body'>
-          <img src={item.image || "https://placehold.it/300x300"} />
+      <Link to={`/adoptionpets/${item._id}`}><img src={item.image || "https://placehold.it/300x300"} /></Link>
           <h3><center>{item.name}</center></h3>
           </div>
         </Col>
-     
+      
+
+
+
    
       </div>
     ))}

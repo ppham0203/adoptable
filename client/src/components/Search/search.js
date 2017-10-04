@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import axios from 'axios';
 import SearchBar from '../Searchbar';
 import DogList from '../Doglist';
-import { Container, Row, Col } from "../Grid";
 import Button from 'react-bootstrap/lib/Button';
 
 class Search extends React.Component {
@@ -56,7 +55,6 @@ class Search extends React.Component {
   }
 
 
-
   render() {
     return (
         <div>
@@ -69,7 +67,6 @@ class Search extends React.Component {
             bsSize="large" 
             title="Search"
             onClick={this.applySearchFilter}
-            onMouseOver={console.log("great")}
             type="success"
           >
           Filter

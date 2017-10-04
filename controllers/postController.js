@@ -1,4 +1,5 @@
 const pet = require("../models/newpet");
+const submitPet = require("../models/petsubmission");
 
 // Defining methods for the booksController
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
          
   },
   create: function(req, res) {
-    pet.create(req.body)
+    submitPet.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

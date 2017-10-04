@@ -1,7 +1,9 @@
 import React, {PropTypes} from 'react';
 import axios from 'axios';
 import SearchBar from '../Searchbar';
-import DogList from './../Doglist';
+import DogList from '../Doglist';
+import { Container, Row, Col } from "../Grid";
+import Button from 'react-bootstrap/lib/Button';
 
 class Search extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class Search extends React.Component {
       dogs: [],
       breed: '',
       gender:'',
+      filteredDogs: []    
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,9 +24,10 @@ class Search extends React.Component {
       console.log("Axios results", results);
       const dogs = results.data;
       const newState = {
-        dogs: dogs // array of dogs returned from server
-      }
-      this.setState(newState)
+        dogs // array of dogs returned from server
+      };
+      this.setState(newState);
+      this.applySearchFilter();
     });
 }
 
@@ -35,14 +39,20 @@ class Search extends React.Component {
     console.log("Handle change", event.target);
   }
 
-  applySearchFilter = dogs => {
-   
-    const filteredDogs = dogs
-    .filter ( item => (this.state.gender !== '') ? item.gender.trim() === this.state.gender : true, this )
-    .filter( item => (this.state.breed !== '') ? item.breed === this.state.breed : true, this )
-    console.log(filteredDogs);
-  
-    return filteredDogs;
+  applySearchFilter(event) {
+    if(event) { 
+      event.preventDefault();
+    }
+      const filteredDogs = this.state.dogs
+      .filter ( item => (this.state.gender !== '') ? item.gender.trim() == this.state.gender : true, this )
+      .filter( item => (this.state.breed !== '') ? item.breed.indexOf(this.state.breed)!=-1 : true, this )
+      console.log(filteredDogs);
+      console.log("this is awesome");
+      const newState = {
+        filteredDogs
+      }
+      this.setState(newState);
+      return filteredDogs;
   }
 
 
@@ -55,9 +65,18 @@ class Search extends React.Component {
             gender={this.state.gender}
             handleChange={this.handleChange}
           />
+          <Button className="btn-lg btn-group-lg btn"
+            bsSize="large" 
+            title="Search"
+            onClick={this.applySearchFilter}
+            onMouseOver={console.log("great")}
+            type="success"
+          >
+          Filter
+          </Button>
 
           <DogList
-            dogs={this.applySearchFilter(this.state.dogs)}
+            dogs={this.state.filteredDogs}
           />
         </div>
     );
@@ -65,6 +84,3 @@ class Search extends React.Component {
 }
 
 export default Search;
-
-
-

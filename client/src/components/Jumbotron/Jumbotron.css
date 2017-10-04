@@ -19,6 +19,11 @@ div.jumbotron h1 {
 	background-color: #eb6864;
 	margin-right: 10px;
 	border-color: #eb6864;
+	color: white;
+}
+
+.btn-lg, .btn-group-lg>.btn hover{
+	color: grey;
 }
 
 .hidden {

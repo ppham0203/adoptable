@@ -1,7 +1,12 @@
 import React, {PropTypes} from 'react';
 import axios from 'axios';
 import SearchBar from '../Searchbar';
+<<<<<<< HEAD
 import DogList from './../Doglist';
+=======
+import DogList from '../Doglist';
+import { Container, Row, Col } from "../Grid";
+>>>>>>> master
 import Button from 'react-bootstrap/lib/Button';
 
 class Search extends React.Component {
@@ -67,6 +72,10 @@ class Search extends React.Component {
             bsSize="large" 
             title="Search"
             onClick={this.applySearchFilter}
+<<<<<<< HEAD
+=======
+            onMouseOver={console.log("great")}
+>>>>>>> master
             type="success"
           >
           Filter

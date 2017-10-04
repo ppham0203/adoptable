@@ -2,16 +2,12 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
 import Input from "../components/Input";
-import Button from 'react-bootstrap/lib/Button';
-import DropdownButton from "react-bootstrap/lib/DropdownButton";
-import MenuItem from "react-bootstrap/lib/MenuItem";
-// import Modal from "react-bootstrap/lib/Modal";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import { Link, Route } from "react-router-dom";
 import Search from "../components/Search";
-// import Searchbar from "../components/Searchbar";
-// import Doglist from "../components/Doglist";
+// // import Searchbar from "../components/Searchbar";
+// import DogList from "../components/Doglist";
 
 class App extends Component {
   state = {
@@ -52,6 +48,7 @@ class App extends Component {
       <div>
         <Nav />
         <Jumbotron />
+<<<<<<< HEAD
         <Container>
           <Row>
             <Col size="md-12">
@@ -106,6 +103,10 @@ class App extends Component {
             </Col>
           </Row>
          
+=======
+        <Container>                   
+          <Search />    
+>>>>>>> master
         </Container>
       </div>
 

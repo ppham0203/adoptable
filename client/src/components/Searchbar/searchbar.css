@@ -1,0 +1,12 @@
+select.btn-lg, .btn-group-lg>.btn {
+	background-color: #eb6864;
+	margin-right: 10px;
+	border-color: #eb6864;
+	color: white;
+}
+button.btn-lg, .btn-group-lg>.btn-default:hover {
+	background-color: #eb6864;
+	margin-right: 10px;
+	border-color: #eb6864;
+	color: white;
+}

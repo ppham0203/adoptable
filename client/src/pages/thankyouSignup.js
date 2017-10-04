@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/lib/Button';
 import Hero from "../components/Hero";
 import { Container, Row, Col } from "../components/Grid";
 import { Link } from "react-router-dom";
+import Nav from "../components/Nav";
 class thanks extends Component {
   
   render() {
     return (
       <div>
+        <Nav />
         <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
           <Row>
             <Col size="xs-9 sm-4">

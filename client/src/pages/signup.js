@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import { Link } from 'react-router-dom';
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
-import Nav from "../components/Nav3";
+import Nav from "../components/Nav";
 
 class User extends Component {
   state = {
@@ -40,9 +40,12 @@ class User extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Hero backgroundImage="https://www.chagrinfallspetclinic.com/wp-content/uploads/2013/09/womanhuggingdog.jpg">
           <Row>
+          
             <Col size="xs-9 sm-4">
+            
               <h1>Sign up</h1>
               <h2>Keep track of your favorite foster pets</h2>
             </Col>

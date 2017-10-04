@@ -72,11 +72,6 @@ class Adoption extends Component {
             <Col size="md-12">
               <form>
                 <Container>
-                <Row>
-                 </Row>
-                  <h2>Approximately 6.5 million companion animals enter U.S. animal shelters nationwide every year.</h2>
-                  <h2>Of that, 1.5 million are euthanized.</h2>
-                  <h2>At Adoptable, we help animals find new homes without the need of ever being placed into shelters.</h2>
                   <Row>
                   <h3>Submit your pets information here and we will find them a forever home:</h3>
                     <Col size="md-4">

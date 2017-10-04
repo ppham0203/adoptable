@@ -7,6 +7,9 @@ const responseGoogle = (response) => {
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
       <div className="navbar-brand right">
+        <a href="/"><h4 className="postPet">Home</h4></a>
+      </div>
+      <div className="navbar-brand right">
         <a href="/signup"><h4 className="postPet">Sign up</h4></a>
       </div>
       <div className="navbar-header">
@@ -21,6 +24,9 @@ const Nav = () => (
       </div>
       <div className="navbar-brand right">
         <a href="/adoptionpage"><h4 className="postPet">Post a Pet</h4></a>
+      </div>
+      <div className="navbar-brand right">
+        <a href="/aboutUs"><h4 className="postPet">About Us</h4></a>
       </div>
   </nav>
 

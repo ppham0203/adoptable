@@ -119,9 +119,11 @@ class Adoption extends Component {
                       >
                         Submit
                       </Button> */}
+                      
                       <Button disabled={!(this.state.name && this.state.breed && this.state.gender && this.state.age && this.state.weight)} onClick={this.handleFormSubmit}>
                         Submit
                       </Button>
+                  
                     </Col>
                     <Col size="md-4"></Col>
                     <Col size="md-4">

@@ -8,6 +8,7 @@ import Search from "./components/Search/search";
 import petProfile from "./components/Petprofile/petProfile";
 import thankyouPage from "./pages/thankyouPage";
 import signup from "./pages/signup";
+import thankyouSignup from "./pages/thankyouSignup";
 
 const App = () => (
  
@@ -20,6 +21,7 @@ const App = () => (
     <Route exact path="/adoptionPets/:id" component={petProfile} />
     <Route exact path="/thankyouPage" component={thankyouPage} />
     <Route path="/signup" component={signup}/>
+    <Route path="/thankyouSignup" component={thankyouSignup} />
     </Switch>
   
 </Router>);

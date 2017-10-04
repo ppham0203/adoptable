@@ -67,10 +67,6 @@ class Search extends React.Component {
             bsSize="large" 
             title="Search"
             onClick={this.applySearchFilter}
-<<<<<<< HEAD
-=======
-            onMouseOver={console.log("great")}
->>>>>>> master
             type="success"
           >
           Filter

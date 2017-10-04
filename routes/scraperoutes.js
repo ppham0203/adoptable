@@ -3,7 +3,7 @@ const router = require("express").Router();
 var request = require("request");
 var cheerio = require("cheerio");
 const pet = require("./../models/newpet.js");
-
+const submitpet = require("./../models/petsubmission.js");
 
 // A GET request to scrape the echojs website
 router.get("/api/scrape", function(req, res) {
@@ -65,6 +65,23 @@ router.get("/results", function(req, res) {
     }
   });
 });
+
+
+
+router.get("/submittedresults", function(req, res) {
+  // Grab every doc in the Articles array
+  submitpet.find({}, function(error, docs) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    // Or send the doc to the browser as a json object
+    else {
+      res.json(docs);
+    }
+  });
+});
+
 
 
   module.exports = router;

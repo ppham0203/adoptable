@@ -24,24 +24,24 @@ class App extends Component {
 
 
   
-  handleInputChange = event => {
+  // handleInputChange = event => {
 
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 
-  handleFormSubmit = event => {
+  // handleFormSubmit = event => {
 
    
-    event.preventDefault();
-    API.getResults(this.state.petSearch)
-      .then(res => this.setState({ pets: res.data }))
-      .catch(err => console.log(err));
+  //   event.preventDefault();
+  //   API.getResults(this.state.petSearch)
+  //     .then(res => this.setState({ pets: res.data }))
+  //     .catch(err => console.log(err));
   
   
-    };
+  //   };
 
 
 
@@ -74,7 +74,7 @@ class App extends Component {
                     </Col>
                     <Col size="xs-9 sm-4">
                      <DropdownButton bsSize="large" title="Breed" id="dropdown-size-large">
-                      <MenuItem >Chihuahua</MenuItem>
+                      <MenuItem onClick={()=> this.setState({breed: "Chihuahua SH MIX"}).bind(this)}>Chihuahua</MenuItem>
                       <MenuItem eventKey="2">Pitbull</MenuItem>
                       <MenuItem eventKey="3">Shih Tsu</MenuItem>
                       <MenuItem eventKey="4">Terrier</MenuItem>

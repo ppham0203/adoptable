@@ -8,8 +8,14 @@ import React from "react";
       value={props.breed}
       onChange={props.handleChange}
     >
-      <option value="Pitbull">Pitbull </option>
-      <option value="Terrier">Terrier </option>
+      <option value="PIT BULL">Pitbull </option>
+      <option value="terrier">Terrier </option>
+      <option value="Chihuahua SH MIX">Chihuahua</option>
+      <option value="GERM SHEPHERD MIX">German Shepherd</option>
+      <option value="POMERANIAN">Pomeranian</option>
+      <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
+   
+
     </select>
 
 
@@ -18,9 +24,9 @@ import React from "react";
       value={props.gender}
       onChange={props.handleChange}
     >
-      <option value="M">Male </option>
-      <option value="F">Female </option>
-      <option value="S">Spade </option>
+      <option value="M">Male</option>
+      <option value="S">Female</option>
+      
     </select>
 
 </div>

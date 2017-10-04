@@ -25,7 +25,19 @@ class Search extends React.Component {
       }
       this.setState(newState)
     });
+
+    
 }
+
+
+// axios.get('/submittedresults').then( (results, res) => {
+//   console.log(res);
+//    const dogs = (res.data + results.data);
+//    const newState = {
+//      dogs: dogs // array of dogs returned from server
+//    }
+//    this.setState(newState)
+//  });
 
   handleChange(event){
     const name = event.target.name;
@@ -39,7 +51,7 @@ class Search extends React.Component {
    
     const filteredDogs = dogs
     .filter ( item => (this.state.gender !== '') ? item.gender.trim() === this.state.gender : true, this )
-    .filter( item => (this.state.breed !== '') ? item.breed === this.state.breed : true, this )
+    .filter( item => (this.state.breed !== '') ? item.breed.trim() === this.state.breed : true, this )
     console.log(filteredDogs);
   
     return filteredDogs;

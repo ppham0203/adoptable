@@ -11,13 +11,13 @@ export default {
     return axios.get("/results", { params: { q: query}});
   },
   getPet: function(id) {
-    return axios.get("/adoptionPets/" + id);
+    return axios.get("/api/adoptionPets/" + id);
     console.log(id);
   },
 
     // Saves a book to the database
     savePet: function(petData) {
-      return axios.post("/adoptionPets", petData);
+      return axios.post("/api/adoptionPets", petData);
     }
 
   

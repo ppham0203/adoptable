@@ -10,26 +10,31 @@ import { Link } from "react-router-dom";
 class Adoption extends Component {
   state = {
     pets: [],
-    name: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    pet_name: "",
     gender: "",
     age: "",
     weight: "",
-    breed: ""
+    breed: "",
+    link: ""
   };
 
 
-  componentDidMount() {
-    this.loadBooks();
-  }
+  // componentDidMount() {
+  //   this.loadBooks();
+  // }
 
-  loadBooks = () => {
-    API.getResults()
-      .then(res =>
-        this.setState({ pets: res.data, name: "", gender: "", age: "" })
-      )
-      .catch(err => console.log(err));
+  // loadBooks = () => {
+  //   API.getResults()
+  //     .then(res =>
+  //       this.setState({ pets: res.data, name: "", gender: "", age: "" })
+  //     )
+  //     .catch(err => console.log(err));
      
-  };
+  // };
   
 
   handleInputChange = event => {
@@ -38,21 +43,27 @@ class Adoption extends Component {
     this.setState({
       [name]: value
     });
+    console.log("Handle change", event.target);
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.name && this.state.gender) {
+    
       API.savePet({
-        name: this.state.name,
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
+        email: this.state.email,
+        phone: this.state.phone,
+        pet_name: this.state.pet_name,
         gender: this.state.gender,
         age: this.state.age,
         weight: this.state.weight,
         breed: this.state.breed,
+        
       })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
+        // .then(res => this.loadBooks())
+        // .catch(err => console.log(err));
+    
   };
 
   render() {
@@ -80,18 +91,37 @@ class Adoption extends Component {
                   <Row>
                   <h3>Submit your pets information here and we will find them a forever home:</h3>
                     <Col size="md-4">
-                      <Input
-                        name="name"
-                        value={this.state.name}
+                    <Input
+                        name="first_name"
+                        value={this.state.first_name}
                         onChange={this.handleInputChange}
-                        placeholder="Name"
+                        placeholder="First Name"
                       />
                       <Input
-                        name="gender"
-                        value={this.state.gender}
+                        name="last_name"
+                        value={this.state.last_name}
                         onChange={this.handleInputChange}
-                        placeholder="Gender"
+                        placeholder="Last Name"
                       />
+                      <Input
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                        placeholder="Email"
+                      />
+                      <Input
+                        name="phone"
+                        value={this.state.phone}
+                        onChange={this.handleInputChange}
+                        placeholder="Phone"
+                      />
+                      <Input
+                        name="pet_name"
+                        value={this.state.pet_name}
+                        onChange={this.handleInputChange}
+                        placeholder="Pet Name"
+                      />
+                      
                       <Input
                         name="age"
                         value={this.state.age}
@@ -104,12 +134,29 @@ class Adoption extends Component {
                         onChange={this.handleInputChange}
                         placeholder="Weight"
                       />
-                      <Input
-                        name="breed"
-                        value={this.state.breed}
-                        onChange={this.handleInputChange}
-                        placeholder="Breed"
-                      />
+                      <select
+                      name="gender"
+                      value={this.state.gender}
+                      onChange={this.handleInputChange}
+                    >
+                      <option value="M">Male</option>
+                      <option value="S">Female</option>
+                      
+                    </select>
+                    <select
+                      name="breed"
+                      value={this.state.breed}
+                      onChange={this.handleInputChange}
+                    >
+                    <option value="PIT BULL">Pitbull </option>
+                    <option value="terrier">Terrier </option>
+                    <option value="Chihuahua SH MIX">Chihuahua</option>
+                    <option value="GERM SHEPHERD MIX">German Shepherd</option>
+                    <option value="POMERANIAN">Pomeranian</option>
+                    <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
+                      
+                    </select>
+                      
                       {/* <Button
                 
                         bsSize="large" 
@@ -119,8 +166,8 @@ class Adoption extends Component {
                       >
                         Submit
                       </Button> */}
-                      <Button disabled={!(this.state.name && this.state.breed && this.state.gender && this.state.age && this.state.weight)} onClick={this.handleFormSubmit}>
-                        Submit
+                      <Button onClick={this.handleFormSubmit}>
+                      <Link to="/thankyouPage">Submit</Link>
                       </Button>
                     </Col>
                     <Col size="md-4"></Col>
@@ -138,5 +185,5 @@ class Adoption extends Component {
     ); 
   }
 }
-
+// disabled={!(this.state.first_name && this.state.last_name && this.state.email && this.statethis.state.pet_name && this.state.breed && this.state.gender && this.state.age && this.state.weight)}
 export default Adoption;

@@ -51,36 +51,79 @@ router.get("/api/scrape", function(req, res) {
   
 
 
+// // This will get the articles we scraped from the mongoDB
+// router.get("/results", function(req, res) {
+//   // Grab every doc in the Articles array
+//   pet.find({}, function(error, doc) {
+//     // Log any errors
+//     if (error) {
+//       console.log(error);
+//     }
+//     // Or send the doc to the browser as a json object
+//     else {
+//       res.json(doc);
+//     }
+//   });
+ 
+
+// });
+
+
+
+
 // This will get the articles we scraped from the mongoDB
 router.get("/results", function(req, res) {
   // Grab every doc in the Articles array
-  pet.find({}, function(error, docs) {
+  pet.find({}, function(error, doc) {
     // Log any errors
     if (error) {
       console.log(error);
     }
     // Or send the doc to the browser as a json object
     else {
-      res.json(docs);
+      submitpet.find({}, function(error, docs) {
+        // Log any errors
+        if (error) {
+          console.log(error);
+        }
+        // Or send the doc to the browser as a json object
+        else {
+          var docs2 = doc + docs;
+          res.json(docs2);
+        }
+      });
     }
   });
+
 });
 
 
 
-router.get("/submittedresults", function(req, res) {
-  // Grab every doc in the Articles array
-  submitpet.find({}, function(error, docs) {
-    // Log any errors
-    if (error) {
-      console.log(error);
-    }
-    // Or send the doc to the browser as a json object
-    else {
-      res.json(docs);
-    }
-  });
-});
+// submitpet.find({}, function(error, docs) {
+//   // Log any errors
+//   if (error) {
+//     console.log(error);
+//   }
+//   // Or send the doc to the browser as a json object
+//   else {
+//     res.json(docs);
+//   }
+// });
+
+
+// router.get("/submittedresults", function(req, res) {
+//   // Grab every doc in the Articles array
+//   submitpet.find({}, function(error, docs) {
+//     // Log any errors
+//     if (error) {
+//       console.log(error);
+//     }
+//     // Or send the doc to the browser as a json object
+//     else {
+//       res.json(docs);
+//     }
+//   });
+// });
 
 
 

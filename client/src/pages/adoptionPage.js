@@ -121,7 +121,7 @@ class Adoption extends Component {
                       </Button> */}
                       
                       <Button disabled={!(this.state.name && this.state.breed && this.state.gender && this.state.age && this.state.weight)} onClick={this.handleFormSubmit}>
-                        Submit
+                      <Link to="/thankyouPage">Submit</Link>
                       </Button>
                   
                     </Col>

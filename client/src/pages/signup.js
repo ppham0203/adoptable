@@ -40,7 +40,7 @@ class User extends Component {
   render() {
     return (
       <div>
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+        <Hero backgroundImage="https://www.chagrinfallspetclinic.com/wp-content/uploads/2013/09/womanhuggingdog.jpg">
           <Row>
             <Col size="xs-9 sm-4">
               <h1>Sign up</h1>
@@ -48,14 +48,19 @@ class User extends Component {
             </Col>
           </Row>
         </Hero>
+        <h1 />
         <Container>
+
           <Row>
+
             <Col size="md-12">
               <form>
                 <Container>
                     <Col size="md-4">
                     </Col>
+                    
                     <Col size="md-4">
+                    
                       <Input
                         value={this.state.name}
                         onChange={this.handleInputChange}

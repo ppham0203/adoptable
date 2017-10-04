@@ -45,37 +45,25 @@ class Petprofile extends Component {
         <Row>
           <Col size="md-6 md-offset-1">
             <article>
-              <h1>{this.state.dogs.name} DOG'S NAME</h1>
+              <h1>{this.state.dogs.name}</h1>
               <p>
               <img src={this.state.dogs.image || "https://placehold.it/300x300"} />
               </p>
             </article>
           </Col>
           <Col size="md 6">
-          <h1> About Dog's Name </h1>
+          <h1> About {this.state.dogs.name} </h1>
           <ul>
-              <li>Name: </li>
-              <li>Breed: </li>
-              <li>Gender:</li>
-              <li>Age: </li>
+              <li>Name: {this.state.dogs.name} </li>
+              <li>Breed: {this.state.dogs.breed} </li>
+              <li>Gender: {this.state.dogs.gender}</li>
+              <li>Age: {this.state.dogs.age}</li>
+              <li> <a href={this.state.dogs.link}>Give this dog a home!</a></li>
           </ul>
              
               
               
           </Col>
-        </Row>
-        <Row>
-          <Col size="md-6 md-offset-6">
-          <Button
-          bsSize="large" 
-          title="Return Home"
-          // onClick={this.handleFormSubmit}
-          // type="success"
-          // className="input-lg"
-        >
-        <Link to="/">Return Home</Link>
-        </Button>
-        </Col>
         </Row>
       </Container>
     );

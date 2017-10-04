@@ -20,8 +20,8 @@ class thanks extends Component {
           <Row>
             <Col size="md-12">
                 <Container>
-                  <h1>Thank You For Posting Your Pet On Adoptable</h1>
-                  <h3>Your best friend is one step closer to finding their forever home. </h3>
+                  <h1>Thank you for signing up for Adoptable</h1>
+                  <h3>You're only a few clicks away from finding your new best friend.</h3>
                   <Button
                         bsSize="large" 
                         title="Return Home"

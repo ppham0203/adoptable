@@ -4,6 +4,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import axios from 'axios';
 import API from '../../utils/API';
 import Nav from "../Nav";
+import "./petProfile.css";
+import Button from 'react-bootstrap/lib/Button';
 
 class Petprofile extends Component {
   state = {
@@ -56,15 +58,24 @@ class Petprofile extends Component {
               <li>Breed: </li>
               <li>Gender:</li>
               <li>Age: </li>
-              <li><a href="/">Give Dog a home</a></li>
-              </ul>
-              <Link to="/">← Back to home</Link>
+          </ul>
+             
+              
+              
           </Col>
         </Row>
         <Row>
-       
-            
-          
+          <Col size="md-6 md-offset-6">
+          <Button
+          bsSize="large" 
+          title="Return Home"
+          // onClick={this.handleFormSubmit}
+          // type="success"
+          // className="input-lg"
+        >
+        <Link to="/">Return Home</Link>
+        </Button>
+        </Col>
         </Row>
       </Container>
     );

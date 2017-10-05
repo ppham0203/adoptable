@@ -86,8 +86,8 @@ class User extends Component {
                         placeholder="Password"
                       />
                       
-                        <Button /**disabled={!(this.state.name && this.state.email && this.state.password)} **/onClick={this.handleFormSubmit}>
-                        <Link to="/thankyouSignup">Submit</Link>
+                        <Button className="submitBtn" /**disabled={!(this.state.name && this.state.email && this.state.password)} **/onClick={this.handleFormSubmit}>
+                        <Link className="submitBtn" to="/thankyouSignup">Submit</Link>
                         </Button>
                       
                     </Col>

@@ -16,10 +16,13 @@ export default {
   },
 
     // Saves a book to the database
-    savePet: function(petData) {
+  savePet: function(petData) {
       return axios.post("/api/adoptionPets", petData);
-    }
+    },
 
-  
+  saveUser: function(userData) {
+      return axios.post("/api/adoptionPets/signup", userData);
+      console.log(userData)
+    }
 };
 

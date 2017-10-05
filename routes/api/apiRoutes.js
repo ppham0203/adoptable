@@ -48,6 +48,10 @@ router.route("/")
 router
   .route("/:id")
   .get(postController.findById)
+
+router
+  .route("/signup")
+  .post(postController.createUser);
   
 
 

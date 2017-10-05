@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <Jumbotron />
+        <Jumbotron backgroundImage={require("../assets/images/doginpark.jpg")}/>
         <Container>                   
           <Search />    
         </Container>

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const petSchema = new Schema({
   image: { type: String, },
-  link: { type: String },
+  link: { type: String, unique: false },
   pet_name: { type: String, },
   gender: { type: String, required: true},
   age: { type: String, },

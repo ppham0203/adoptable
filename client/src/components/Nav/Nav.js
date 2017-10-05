@@ -17,22 +17,19 @@ const Nav = () => (
 		    onFailure={responseGoogle}
 		  />
       </div>
-      <div>
-        <a className="title" href="/">
-          <h2 className="header">Adoptable</h2>
-        </a>
-      </div>
+      <a className="title" href="/">
+        <h2 className="header">Adoptable</h2>
+      </a>
       <a href="/adoptionpage">
         <div className="navbar-brand navbar-right">
-          <h4 className="postPet rightSide">Post a Pet</h4>
+          <a href="/adoptionpage"><h4 className="postPet rightSide">Post a Pet</h4></a>
         </div>
       </a>
       <a href="/aboutUs">
         <div className="navbar-brand navbar-right">
-          <h4 className="postPet rightSide">About Us</h4>
+          <a href="/aboutUs"><h4 className="postPet rightSide">About Us</h4></a>
         </div>
       </a>
-      
   </nav>
 
 );

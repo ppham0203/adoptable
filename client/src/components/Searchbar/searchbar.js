@@ -2,7 +2,7 @@ import React from "react";
 import DogList from "../Doglist";
 import { Row, Col, Container } from "../Grid";
 import "./searchbar.css";
-// RecipeList renders a bootstrap list item
+
 const SearchBar = (props) => (
   <div>
     <select className="btn-lg btn-group-lg btn"

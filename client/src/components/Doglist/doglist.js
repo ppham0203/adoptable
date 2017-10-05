@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from "../Grid";
-// import Thumbnail from "../Thumbnail";
 import "./doglist.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 const DogList = (props) => (
 <Container>
   <Row>  
-  <div>
+  <div> 
     {props.dogs.map(item => (
       <div key={item._id}>
       <Col size="xs-4 sm-4">
@@ -31,8 +30,6 @@ const DogList = (props) => (
   
 );
 
-
-
 DogList.propTypes = {
   dogs: PropTypes.array.isRequired
 }
@@ -41,6 +38,3 @@ export default DogList;
 
 
 
-//   <li key={props._id}>
-//   {props.name}
-// </li>

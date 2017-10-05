@@ -21,11 +21,11 @@ router.get("/api/scrape", function(req, res) {
 
           result.image = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").find("img").attr("src")}`;
           result.link = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").attr("href")}`;
-          result.name = $(element).children().eq(1).text();
-          result.gender = $(element).children().eq(2).text();
-          result.age = $(element).children().eq(3).text();
-          result.weight = $(element).children().eq(4).text();
-          result.breed = $(element).children().eq(6).text();
+          result.name = $(element).children().eq(1).text().trim();
+          result.gender = $(element).children().eq(2).text().trim();
+          result.age = $(element).children().eq(3).text().trim();
+          result.weight = $(element).children().eq(4).text().trim();
+          result.breed = $(element).children().eq(6).text().trim();
     
     // Using our Article model, create a new entry
           // This effectively passes the result object to the entry (and the title and link)
@@ -52,7 +52,7 @@ router.get("/api/scrape", function(req, res) {
   
 
 
-// This will get the articles we scraped from the mongoDB
+  // This will get the articles we scraped from the mongoDB
 router.get("/results", function(req, res) {
   // Grab every doc in the Articles array
   pet.find({}, function(error, doc) {

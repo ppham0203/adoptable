@@ -5,7 +5,6 @@ import axios from 'axios';
 import API from '../../utils/API';
 import Nav from "../Nav";
 import "./petProfile.css";
-import Button from 'react-bootstrap/lib/Button';
 
 class Petprofile extends Component {
   state = {
@@ -27,6 +26,8 @@ class Petprofile extends Component {
       API.getPet(this.props.match.params.id)
       .then(res => this.setState({ dogs: res.data }))
       .catch(err => console.log(err));
+
+
   }
 
   render() {

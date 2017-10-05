@@ -1,12 +1,17 @@
 select.btn-lg, .btn-group-lg>.btn {
+	position: relative;
+	left: 28%;
+	top: 17px;
 	background-color: #eb6864;
-	margin-right: 10px;
+	margin-right: 17px;
 	border-color: #eb6864;
 	color: white;
 }
-button.btn-lg, .btn-group-lg>.btn-default:hover {
+button.btn-lg, .btn-group-lg>.btn-default {
+	position: relative;
+	left: 67%;
+	top: -38px;
 	background-color: #eb6864;
-	margin-right: 10px;
 	border-color: #eb6864;
 	color: white;
 }

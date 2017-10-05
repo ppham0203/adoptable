@@ -46,16 +46,16 @@ class Petprofile extends Component {
         <Row>
           <Col size="md-6 md-offset-1">
             <article>
-              <h1>{this.state.dogs.name}</h1>
+              <h1>{this.state.dogs.pet_name}</h1>
               <p>
               <img src={this.state.dogs.image || "https://placehold.it/300x300"} />
               </p>
             </article>
           </Col>
           <Col size="md 6">
-          <h1> About {this.state.dogs.name} </h1>
+          <h1> About {this.state.dogs.pet_name} </h1>
           <ul>
-              <li>Name: {this.state.dogs.name} </li>
+              <li>Name: {this.state.dogs.pet_name} </li>
               <li>Breed: {this.state.dogs.breed} </li>
               <li>Gender: {this.state.dogs.gender}</li>
               <li>Age: {this.state.dogs.age}</li>

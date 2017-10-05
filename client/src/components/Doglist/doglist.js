@@ -12,9 +12,9 @@ const DogList = (props) => (
     {props.dogs.map(item => (
       <div key={item._id}>
       <Col size="xs-4 sm-4">
-      <div className='panel-body'>
+      <div>
       <Link to={`/adoptionpets/${item._id}`}><img src={item.image || "https://placehold.it/300x300"} /></Link>
-          <h3><center>{item.name}</center></h3>
+          <h3><center>{item.pet_name}</center></h3>
           </div>
         </Col>
       

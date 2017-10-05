@@ -21,7 +21,7 @@ router.get("/api/scrape", function(req, res) {
 
           result.image = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").find("img").attr("src")}`;
           result.link = `http://petadoption.ocpetinfo.com/Adopt/${$(element).find("a").attr("href")}`;
-          result.name = $(element).children().eq(1).text().trim();
+          result.pet_name = $(element).children().eq(1).text().trim();
           result.gender = $(element).children().eq(2).text().trim();
           result.age = $(element).children().eq(3).text().trim();
           result.weight = $(element).children().eq(4).text().trim();

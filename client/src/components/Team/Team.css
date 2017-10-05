@@ -1,0 +1,48 @@
+.andrewteamimg {
+	border-radius: 150px;
+	height: 250px;
+	width: 250px;
+}
+
+.andrewteamimg:hover{
+	height: 250px;
+	width: 250px;
+	content:url(../../assets/images/andrew.JPG);
+}
+
+.toriteamimg {
+	border-radius: 150px;
+	height: 250px;
+	width: 250px;
+}
+
+.toriteamimg:hover{
+	height: 250px;
+	width: 250px;
+	content:url(../../assets/images/tori.png);
+}
+
+.peterteamimg {
+	border-radius: 150px;
+	height: 250px;
+	width: 250px;
+}
+
+.peterteamimg:hover{
+	height: 250px;
+	width: 250px;
+	content:url(../../assets/images/peter.png);
+}
+
+.ianteamimg {
+	border-radius: 150px;
+	height: 250px;
+	width: 250px;
+}
+
+.ianteamimg:hover{
+	height: 250px;
+	width: 250px;
+	content:url(../../assets/images/ian.png);
+}
+

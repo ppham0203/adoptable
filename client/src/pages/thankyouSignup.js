@@ -31,7 +31,7 @@ class thanks extends Component {
                         // type="success"
                         // className="input-lg"
                       >
-                      <Link to="/">Return Home</Link>
+                      <Link className="submitBtn" to="/">Return Home</Link>
                       </Button>
                 </Container>
             </Col>

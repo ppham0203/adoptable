@@ -1,10 +1,9 @@
 import React from "react";
 import DogList from "../Doglist";
-import { Row, Col, Container } from "../Grid";
 import "./searchbar.css";
 
 const SearchBar = (props) => (
-  <div>
+  <div> 
     <select className="btn-lg btn-group-lg btn"
         name="breed"
         value={props.breed}
@@ -22,7 +21,7 @@ const SearchBar = (props) => (
         onChange={props.handleChange}
       >
         <option value="">Gender (Show All)</option>
-        <option value="M">Male </option>
+        <option value="N">Male </option>
         <option value="S">Female </option>
       </select>
     </div>

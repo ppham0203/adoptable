@@ -1,10 +1,11 @@
 .jumbotron {
-  min-height: 300px;
+  min-height: 500px;
   padding-top: 75px;
-  background-image: url("../../assets/images/dogsandcats.png");
+  background-image: url("../../assets/images/dogs-walking.jpg");
+  background-repeat: no-repeat;
   background-position: bottom;
-  background-repeat: repeat-x;
-  opacity: 0.9;
+  background-size: cover;
+  background-color: black;
 }
 
 div.jumbotron h4 {
@@ -28,4 +29,14 @@ div.jumbotron h1 {
 
 .hidden {
 	display: none;
+}
+
+h1.homepage {
+	text-align: center;
+	color: white;
+  	padding-top: 140px;
+}
+h2.homepage {
+	text-align: center;
+	color: white;
 }

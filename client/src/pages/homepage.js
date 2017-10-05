@@ -15,34 +15,6 @@ class App extends Component {
     petSearch: ""
   };
 
-
-
-
-
-  
-  // handleInputChange = event => {
-
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
-
-  // handleFormSubmit = event => {
-
-   
-  //   event.preventDefault();
-  //   API.getResults(this.state.petSearch)
-  //     .then(res => this.setState({ pets: res.data }))
-  //     .catch(err => console.log(err));
-  
-  
-  //   };
-
-
-
-
-
   render() {
     return (
       <div>

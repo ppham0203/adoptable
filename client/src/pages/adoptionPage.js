@@ -21,20 +21,6 @@ class Adoption extends Component {
     breed: "",
     link: ""
   };
-
-
-  // componentDidMount() {
-  //   this.loadBooks();
-  // }
-
-  // loadBooks = () => {
-  //   API.getResults()
-  //     .then(res =>
-  //       this.setState({ pets: res.data, name: "", gender: "", age: "" })
-  //     )
-  //     .catch(err => console.log(err));
-     
-  // };
   
 
   handleInputChange = event => {
@@ -60,10 +46,7 @@ class Adoption extends Component {
         weight: this.state.weight,
         breed: this.state.breed,
         
-      })
-        // .then(res => this.loadBooks())
-        // .catch(err => console.log(err));
-    
+      })    
   };
 
   render() {
@@ -84,7 +67,12 @@ class Adoption extends Component {
               <form>
                 <Container>
                   <Row>
-                  <h3>Submit your pets information here and we will find them a forever home:</h3>
+                    <h3>Reasons for Posting a Pet</h3>
+                    <p>Life circumstances change and you can no longer provide a suitable home for your pet.</p>
+                    <p>Your mama pet has babies that need loving homes.</p>
+                    <p>You have found a stray animal or are temporarily fostering an animal until a forever home can be found.</p>
+                    <p>To avoid the animal shelters completely.</p>
+                    <h4>Submit your pets information here and we will find them a forever home:</h4>
                     <Col size="md-4">
                     <Input
                         name="first_name"
@@ -129,7 +117,7 @@ class Adoption extends Component {
                         onChange={this.handleInputChange}
                         placeholder="Weight"
                       />
-                      <select
+                      <select className="adoptionPgSelect"
                       name="gender"
                       value={this.state.gender}
                       onChange={this.handleInputChange}
@@ -138,31 +126,24 @@ class Adoption extends Component {
                       <option value="S">Female</option>
                       
                     </select>
-                    <select
+                    <select className="adoptionPgSelect"
                       name="breed"
                       value={this.state.breed}
                       onChange={this.handleInputChange}
                     >
-                    <option value="PIT BULL">Pitbull </option>
-                    <option value="terrier">Terrier </option>
+                    
                     <option value="Chihuahua SH MIX">Chihuahua</option>
                     <option value="GERM SHEPHERD MIX">German Shepherd</option>
+                    <option value="PIT BULL">Pitbull </option>
                     <option value="POMERANIAN">Pomeranian</option>
                     <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
                       
                     </select>
-                      
-                      {/* <Button
-                
-                        bsSize="large" 
+                      <Button className="submitBtn"
+                        title="Submit"
                         onClick={this.handleFormSubmit}
                         type="success"
-                        className="input-lg"
-                      >
-                        Submit
-                      </Button> */}
-                      <Button onClick={this.handleFormSubmit}>
-                      <Link to="/thankyouPage">Submit</Link>
+                      ><Link to="/thankyouPage" className="linkage">Submit</Link>
                       </Button>
                   
                     </Col>

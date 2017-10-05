@@ -10,7 +10,8 @@ import Nav from "../components/Nav";
 
 class User extends Component {
   state = {
-    name: [],
+    user: [],
+    name: "",    
     email: "",
     password: "",
  
@@ -26,7 +27,7 @@ class User extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.name && this.state.email) {
+    
       API.saveUser({
         name: this.state.name,
         email: this.state.email,
@@ -34,7 +35,7 @@ class User extends Component {
       })
         .then(res => this.loadUser())
         .catch(err => console.log(err));
-    }
+
   };
 
   render() {
@@ -85,7 +86,7 @@ class User extends Component {
                         placeholder="Password"
                       />
                       
-                        <Button disabled={!(this.state.name && this.state.breed && this.state.gender && this.state.age && this.state.weight)} onClick={this.handleFormSubmit}>
+                        <Button /**disabled={!(this.state.name && this.state.email && this.state.password)} **/onClick={this.handleFormSubmit}>
                         <Link to="/thankyouSignup">Submit</Link>
                         </Button>
                       

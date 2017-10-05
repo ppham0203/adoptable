@@ -35,9 +35,11 @@ class Petprofile extends Component {
             </article>
           </Col>
           <Col size="md 6">
+          <h1> About Me </h1>
               <li>Breed: {this.state.dogs.breed} </li>
               <li>Gender: {this.state.dogs.gender}</li>
               <li>Age: {this.state.dogs.age}</li>
+              <li> <a href={this.state.dogs.link}>Give me a home!</a></li>
           </Col>
         </Row>
       </Container>

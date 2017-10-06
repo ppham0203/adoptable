@@ -42,6 +42,12 @@ button.submitBtn.btn.btn-lg.btn-default {
 	border-color: #eb6864;
 }
 
+button.submitBtn {
+	color: white;
+	background-color: #eb6864;
+	border-color: #eb6864;
+}
+
 .linkage {	
 	color: white;
 	background-color: #eb6864;

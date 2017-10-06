@@ -141,14 +141,14 @@ class Adoption extends Component {
                     <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
                       
                     </select>
-                      <Link to="/thankyouPage" className="linkage">
+                      
                       <Button className="submitBtn"
                         title="Submit"
                         onClick={this.handleFormSubmit}
                         type="success"
-                      >Submit
+                      ><Link to="/thankyouPage" className="linkage">Submit</Link>
                       </Button>
-                      </Link>
+                      
                     </Col>
                     <Col size="md-1"></Col>
                     <Col size="md-3">

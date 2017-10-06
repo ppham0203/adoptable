@@ -19,7 +19,7 @@ class thanks extends Component {
           </Row>
         </Hero>
         
-          <Link to="/"><Button className="returnHomeBtn" 
+          <a className="goHome" href="/"><Button className="returnHomeBtn" 
                 bsSize="large" 
                 title="Return Home"
                 // onClick={this.handleFormSubmit}
@@ -27,7 +27,7 @@ class thanks extends Component {
                 // className="input-lg"
               >
               Return Home
-              </Button></Link>
+              </Button></a>
                 
       </div>
     ); 

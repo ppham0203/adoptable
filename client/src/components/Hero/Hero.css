@@ -36,11 +36,20 @@ h1.thankYou{
   padding-top: 25px;
 }
 
+h2.aboutPar{
+  padding-top: 45px;
+}
+
+a.submitBtn{
+  color: white;
+}
 button.returnHome{
+  color:white;
   left: 0;
   top: 30px;
 }
 button.returnHomeBtn{
-  left: 180px;
+  color: white;
+  left: 175px;
   top: -70px;
 }

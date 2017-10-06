@@ -7,6 +7,7 @@ import petProfile from "./components/Petprofile/petProfile";
 import thankyouPage from "./pages/thankyouPage";
 import thankyouSignup from "./pages/thankyouSignup";
 import signup from "./pages/signup";
+import login from "./pages/login";
 
 const App = () => (
   <Router>
@@ -18,6 +19,7 @@ const App = () => (
     <Route exact path="/thankyouPage" component={thankyouPage} />
     <Route path="/thankyouSignup" component={thankyouSignup}/>
     <Route path="/signup" component={signup}/>
+    <Route path="/login" component={login}/>
     </Switch>
 </Router>);
   

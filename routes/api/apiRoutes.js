@@ -31,6 +31,9 @@ router
   .route("/signup")
   .post(postController.createUser);
 
+router 
+  .route("/verifyUser")
+  .post(postController.verifyInfo)
 
 
 

@@ -15,6 +15,10 @@ export default {
 
   saveUser: function (userData) {
     return axios.post("/api/adoptionPets/signup", userData);
+  },
+  verifyUser: function(userData) {
+    return axios.post("/api/adoptionPets/verifyInfo", userData);
+    console.log(userData)
   }
 };
 

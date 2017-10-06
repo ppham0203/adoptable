@@ -3,18 +3,25 @@ import "./Nav.css";
 import GoogleLogin from 'react-google-login';
 const responseGoogle = (response) => {
   console.log(response);
+  alert("You are logged in")
 }  
+const fail = (response) => {
+  alert("Please try again")
+}
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
       <div className="navbar-brand">
         <a href="/signup"><h4 className="postPet">Sign up</h4></a>
       </div>
+      <div className="navbar-brand">
+        <a href="/login"><h4 className="postPet">Login</h4></a>
+      </div>
       <div className="navbar-header navbar-brand">
 	      <GoogleLogin className="google"
 		    clientId="202041517557-vaub2sonoel9t658dk81dj0hh5qj9lru.apps.googleusercontent.com"
-		    buttonText="LOGIN"
+		    buttonText="GOOGLE LOGIN"
 		    onSuccess={responseGoogle}
-		    onFailure={responseGoogle}
+		    onFailure={fail}
 		  />
       </div>
       <a className="title" href="/">

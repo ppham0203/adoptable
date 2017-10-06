@@ -5,7 +5,7 @@ import { Container, Row, Col } from "../components/Grid";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav"
 class thanks extends Component {
-  
+
   render() {
     return (
       <div>
@@ -21,24 +21,21 @@ class thanks extends Component {
         <Container>
           <Row>
             <Col size="md-12">
-                <Container>
-                  <h1>Thank You For Posting Your Pet On Adoptable</h1>
-                  <h3>Your best friend is one step closer to finding their forever home. </h3>
-                  <Button
-                        bsSize="large" 
-                        title="Return Home"
-                        // onClick={this.handleFormSubmit}
-                        // type="success"
-                        // className="input-lg"
-                      >
-                      <Link className="submitBtn" to="/">Return Home</Link>
-                      </Button>
-                </Container>
+              <Container>
+                <h1>Thank You For Posting Your Pet On Adoptable</h1>
+                <h3>Your best friend is one step closer to finding their forever home. </h3>
+                <Button
+                  bsSize="large"
+                  title="Return Home"
+                >
+                  <Link className="submitBtn" to="/">Return Home</Link>
+                </Button>
+              </Container>
             </Col>
           </Row>
         </Container>
       </div>
-    ); 
+    );
   }
 }
 export default thanks;

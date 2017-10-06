@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const postRoute = require("./apiRoutes");
+const apiRoute = require("./apiRoutes");
 
-// Book routes
-router.use("/api/adoptionPets", postRoute);
+// api routes
+router.use("/api/adoptionPets", apiRoute);
 
 module.exports = router;

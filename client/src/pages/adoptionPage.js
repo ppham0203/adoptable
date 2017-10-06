@@ -21,7 +21,7 @@ class Adoption extends Component {
     breed: "",
     link: ""
   };
-  
+
 
   handleInputChange = event => {
 
@@ -34,19 +34,19 @@ class Adoption extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
-      API.savePet({
-        first_name: this.state.first_name,
-        last_name: this.state.last_name,
-        email: this.state.email,
-        phone: this.state.phone,
-        pet_name: this.state.pet_name,
-        gender: this.state.gender,
-        age: this.state.age,
-        weight: this.state.weight,
-        breed: this.state.breed,
-        
-      })    
+
+    API.savePet({
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      phone: this.state.phone,
+      pet_name: this.state.pet_name,
+      gender: this.state.gender,
+      age: this.state.age,
+      weight: this.state.weight,
+      breed: this.state.breed,
+
+    })
   };
 
   render() {
@@ -74,7 +74,7 @@ class Adoption extends Component {
                     <p>You want to avoid the animal shelters completely in all aspects of your adoption process.</p>
                     <h4>Submit your pets information here and we will find them a forever home by adding them onto our list of adoptable pets on our homepage</h4>
                     <Col size="md-4">
-                    <Input
+                      <Input
                         name="first_name"
                         value={this.state.first_name}
                         onChange={this.handleInputChange}
@@ -104,7 +104,7 @@ class Adoption extends Component {
                         onChange={this.handleInputChange}
                         placeholder="Pet Name"
                       />
-                      
+
                       <Input
                         name="age"
                         value={this.state.age}
@@ -118,38 +118,38 @@ class Adoption extends Component {
                         placeholder="Weight"
                       />
                       <select className="adoptionPgSelect"
-                      name="gender"
-                      value={this.state.gender}
-                      onChange={this.handleInputChange}
-                    >
-                      <option value="M">Male</option>
-                      <option value="S">Female</option>
-                      
-                    </select>
-                    <select className="adoptionPgSelect"
-                      name="breed"
-                      value={this.state.breed}
-                      onChange={this.handleInputChange}
-                    >
-                    
-                    <option value="Chihuahua SH MIX">Chihuahua</option>
-                    <option value="GERM SHEPHERD MIX">German Shepherd</option>
-                    <option value="PIT BULL">Pitbull </option>
-                    <option value="POMERANIAN">Pomeranian</option>
-                    <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
-                      
-                    </select>
+                        name="gender"
+                        value={this.state.gender}
+                        onChange={this.handleInputChange}
+                      >
+                        <option value="M">Male</option>
+                        <option value="S">Female</option>
+
+                      </select>
+                      <select className="adoptionPgSelect"
+                        name="breed"
+                        value={this.state.breed}
+                        onChange={this.handleInputChange}
+                      >
+
+                        <option value="Chihuahua SH MIX">Chihuahua</option>
+                        <option value="GERM SHEPHERD MIX">German Shepherd</option>
+                        <option value="PIT BULL">Pitbull </option>
+                        <option value="POMERANIAN">Pomeranian</option>
+                        <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
+
+                      </select>
                       <Button className="submitBtn"
                         title="Submit"
                         onClick={this.handleFormSubmit}
                         type="success"
                       ><Link to="/thankyouPage" className="linkage">Submit</Link>
                       </Button>
-                  
+
                     </Col>
                     <Col size="md-4"></Col>
                     <Col size="md-4">
-                      <iframe width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
+                      <iframe title="video" width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
                       </iframe>
                     </Col>
                   </Row>
@@ -159,8 +159,8 @@ class Adoption extends Component {
           </Row>
         </Container>
       </div>
-    ); 
+    );
   }
 }
-// disabled={!(this.state.first_name && this.state.last_name && this.state.email && this.statethis.state.pet_name && this.state.breed && this.state.gender && this.state.age && this.state.weight)}
+
 export default Adoption;

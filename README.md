@@ -22,22 +22,22 @@ Sign Up Page and Login.
 
 
 Main Home Page with aggregated list of shelter animals all centrally located.
- ![alt text](../../assets/images/ScreenShot2.png)
+ ![alt text](client/src/assets/images/ScreenShot2.png)
 
 
 Posting a Pet.
- ![alt text](../../assets/images/ScreenShot3.png)
+ ![alt text](client/src/assets/images/ScreenShot3.png)
 
 
 Posted Pet is added to homepage with all animals that need adoption.
- ![alt text](../../assets/images/ScreenShot4.png)
+ ![alt text](client/src/assets/images/ScreenShot4.png)
 
 
 Pet Profile Page where can get more information about a particular pet.
- ![alt text](../../assets/images/ScreenShot5.png)
+ ![alt text](client/src/assets/images/ScreenShot5.png)
 
 
 About Adoptable and meet the team that made it happen.
- ![alt text](../../assets/images/ScreenShot6.png)
+ ![alt text](client/src/assets/images/ScreenShot6.png)
 
  

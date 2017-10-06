@@ -6,6 +6,7 @@ import Input from "../components/Input";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import { Link } from "react-router-dom";
+import Uploader from "../components/Uploader"
 
 class Adoption extends Component {
   state = {
@@ -21,7 +22,7 @@ class Adoption extends Component {
     breed: "",
     link: ""
   };
-  
+
 
   handleInputChange = event => {
 
@@ -34,19 +35,19 @@ class Adoption extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
-      API.savePet({
-        first_name: this.state.first_name,
-        last_name: this.state.last_name,
-        email: this.state.email,
-        phone: this.state.phone,
-        pet_name: this.state.pet_name,
-        gender: this.state.gender,
-        age: this.state.age,
-        weight: this.state.weight,
-        breed: this.state.breed,
-        
-      })    
+
+    API.savePet({
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      phone: this.state.phone,
+      pet_name: this.state.pet_name,
+      gender: this.state.gender,
+      age: this.state.age,
+      weight: this.state.weight,
+      breed: this.state.breed,
+
+    })
   };
 
   render() {
@@ -72,9 +73,9 @@ class Adoption extends Component {
                     <p>Your pet has puppies that you need to find loving homes for.</p>
                     <p>You have found a stray animal or are temporarily fostering an animal until a forever home can be found.</p>
                     <p>You want to avoid the animal shelters completely in all aspects of your adoption process.</p>
-                    <h4>Submit your pets information here and we will find them a forever home by adding them onto our list of adoptable pets on our homepage</h4>
+                    <h4>Submit your pet's information here and we will find them a forever home by adding them onto our list of adoptable pets on our homepage</h4>
                     <Col size="md-4">
-                    <Input
+                      <Input
                         name="first_name"
                         value={this.state.first_name}
                         onChange={this.handleInputChange}
@@ -104,7 +105,7 @@ class Adoption extends Component {
                         onChange={this.handleInputChange}
                         placeholder="Pet Name"
                       />
-                      
+
                       <Input
                         name="age"
                         value={this.state.age}
@@ -122,6 +123,7 @@ class Adoption extends Component {
                       value={this.state.gender}
                       onChange={this.handleInputChange}
                     >
+                      <option value="">Gender</option>
                       <option value="M">Male</option>
                       <option value="S">Female</option>
                       
@@ -131,7 +133,7 @@ class Adoption extends Component {
                       value={this.state.breed}
                       onChange={this.handleInputChange}
                     >
-                    
+                    <option value="">Breed</option>
                     <option value="Chihuahua SH MIX">Chihuahua</option>
                     <option value="GERM SHEPHERD MIX">German Shepherd</option>
                     <option value="PIT BULL">Pitbull </option>
@@ -139,17 +141,21 @@ class Adoption extends Component {
                     <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
                       
                     </select>
+                      <Link to="/thankyouPage" className="linkage">
                       <Button className="submitBtn"
                         title="Submit"
                         onClick={this.handleFormSubmit}
                         type="success"
-                      ><Link to="/thankyouPage" className="linkage">Submit</Link>
+                      >Submit
                       </Button>
-                  
+                      </Link>
                     </Col>
-                    <Col size="md-4"></Col>
+                    <Col size="md-1"></Col>
+                    <Col size="md-3">
+                    <Uploader />
+                    </Col>
                     <Col size="md-4">
-                      <iframe width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
+                      <iframe title="video" width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
                       </iframe>
                     </Col>
                   </Row>
@@ -159,8 +165,8 @@ class Adoption extends Component {
           </Row>
         </Container>
       </div>
-    ); 
+    );
   }
 }
-// disabled={!(this.state.first_name && this.state.last_name && this.state.email && this.statethis.state.pet_name && this.state.breed && this.state.gender && this.state.age && this.state.weight)}
+
 export default Adoption;

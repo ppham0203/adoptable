@@ -1,11 +1,15 @@
 {
-  "main.css": "static/css/main.7b6b1658.css",
-  "main.css.map": "static/css/main.7b6b1658.css.map",
-  "main.js": "static/js/main.2ed28de7.js",
-  "main.js.map": "static/js/main.2ed28de7.js.map",
+  "main.css": "static/css/main.878bd728.css",
+  "main.css.map": "static/css/main.878bd728.css.map",
+  "main.js": "static/js/main.dc65e030.js",
+  "main.js.map": "static/js/main.dc65e030.js.map",
   "static\\media\\andrew.JPG": "static/media/andrew.2556d38d.JPG",
-  "static\\media\\dogs-walking.jpg": "static/media/dogs-walking.af7fbce1.jpg",
+  "static\\media\\andrewdog.jpg": "static/media/andrewdog.e003e728.jpg",
+  "static\\media\\dog-holding-leash.jpg": "static/media/dog-holding-leash.8bc47243.jpg",
   "static\\media\\ian.png": "static/media/ian.116ad1a4.png",
+  "static\\media\\iandog.png": "static/media/iandog.beb441d9.png",
   "static\\media\\peter.png": "static/media/peter.ab079246.png",
-  "static\\media\\tori.png": "static/media/tori.dd5f7aa8.png"
+  "static\\media\\peterdog.jpg": "static/media/peterdog.39516678.jpg",
+  "static\\media\\tori.png": "static/media/tori.dd5f7aa8.png",
+  "static\\media\\toridog.jpg": "static/media/toridog.e356b162.jpg"
 }

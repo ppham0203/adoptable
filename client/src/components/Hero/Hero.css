@@ -31,3 +31,25 @@
   padding-top: 140px;
   margin-top: 0;
 }
+
+h1.thankYou{
+  padding-top: 25px;
+}
+
+h2.aboutPar{
+  padding-top: 45px;
+}
+
+a.submitBtn{
+  color: white;
+}
+button.returnHome{
+  color:white;
+  left: 0;
+  top: 30px;
+}
+button.returnHomeBtn{
+  color: white;
+  left: 175px;
+  top: -70px;
+}

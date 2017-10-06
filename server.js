@@ -5,7 +5,11 @@ const mongoose = require("mongoose");
 const routes = require("./routes/api");
 const scrapeRoutes = require("./routes/scraperoutes");
 // const postroutes = require("./routes/api/apiRoutes");
+// const corsPrefetch = require('cors-prefetch-middleware');
+// const imagesUpload = require('images-upload-middleware'); 
+
 const app = express();
+
 
 
 
@@ -16,6 +20,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
+// app.use(corsPrefetch);
+
+// app.post('/notmultiple', imagesUpload(
+//     './server/static/files',
+//     'http://localhost:3000/static/files'
+// ));
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
@@ -26,9 +36,6 @@ mongoose.connect(
     useMongoClient: true
   }
 );
-
-
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -38,14 +45,13 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 app.use(scrapeRoutes);
 
-
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

@@ -1,6 +1,7 @@
 nav.navbar {
 	margin-bottom: 0;
 }
+
 a.navbar-brand {
 	font-size: 23px;
 	font-family: "News Cycle","Arial Narrow Bold",sans-serif;
@@ -35,7 +36,7 @@ button.google {
 	height: 38px;
 }
 
-.submitBtn {	
+button.submitBtn.btn.btn-lg.btn-default {	
 	color: white;
 	background-color: #eb6864;
 	border-color: #eb6864;

@@ -119,29 +119,6 @@ class Adoption extends Component {
                         placeholder="Weight"
                       />
                       <select className="adoptionPgSelect"
-<<<<<<< HEAD
-                        name="gender"
-                        value={this.state.gender}
-                        onChange={this.handleInputChange}
-                      >
-                        <option value="M">Male</option>
-                        <option value="S">Female</option>
-
-                      </select>
-                      <select className="adoptionPgSelect"
-                        name="breed"
-                        value={this.state.breed}
-                        onChange={this.handleInputChange}
-                      >
-
-                        <option value="Chihuahua SH MIX">Chihuahua</option>
-                        <option value="GERM SHEPHERD MIX">German Shepherd</option>
-                        <option value="PIT BULL">Pitbull </option>
-                        <option value="POMERANIAN">Pomeranian</option>
-                        <option value="YORKSHIRE TERR">Yorkshire Terrier</option>
-
-                      </select>
-=======
                       name="gender"
                       value={this.state.gender}
                       onChange={this.handleInputChange}
@@ -165,22 +142,17 @@ class Adoption extends Component {
                       
                     </select>
                       <Link to="/thankyouPage" className="linkage">
->>>>>>> master
                       <Button className="submitBtn"
                         title="Submit"
                         onClick={this.handleFormSubmit}
                         type="success"
                       >Submit
                       </Button>
-<<<<<<< HEAD
-
-=======
                       </Link>
                     </Col>
                     <Col size="md-1"></Col>
                     <Col size="md-3">
                     <Uploader />
->>>>>>> master
                     </Col>
                     <Col size="md-4">
                       <iframe title="video" width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">

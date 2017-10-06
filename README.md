@@ -18,7 +18,7 @@ Technology used:
 - API Data Routing
 
 Sign Up Page and Login.
- ![alt text](../../assets/images/ScreenShot1.png)
+ ![alt text](../assets/images/ScreenShot1.png)
 
 
 Main Home Page with aggregated list of shelter animals all centrally located.
@@ -37,7 +37,7 @@ Pet Profile Page where can get more information about a particular pet.
  ![alt text](../../assets/images/ScreenShot5.png)
 
 
-About Adoptable and meet the team that made it happen
+About Adoptable and meet the team that made it happen.
  ![alt text](../../assets/images/ScreenShot6.png)
 
  

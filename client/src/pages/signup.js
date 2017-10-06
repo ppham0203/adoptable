@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from 'react-bootstrap/lib/Button';
 import Input from "../components/Input";
 import Hero from "../components/Hero";
-//import Input from "../components/Input";
 import { Link } from 'react-router-dom';
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";

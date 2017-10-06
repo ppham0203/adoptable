@@ -4,10 +4,6 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes/api");
 const scrapeRoutes = require("./routes/scraperoutes");
-<<<<<<< HEAD
-const app = express();
-
-=======
 // const postroutes = require("./routes/api/apiRoutes");
 // const corsPrefetch = require('cors-prefetch-middleware');
 // const imagesUpload = require('images-upload-middleware'); 
@@ -17,7 +13,6 @@ const app = express();
 
 
 
->>>>>>> master
 const PORT = process.env.PORT || 3001;
 
 // Configure body parser for AJAX requests

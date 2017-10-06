@@ -12,7 +12,7 @@ class aboutUs extends Component {
     return (
       <div>
         <Nav />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+        <Hero backgroundImage="http://www.readersdigest.co.uk/sites/default/files/styles/header_v3/public/article-top/dog-talk.jpg?itok=ifqpfKcp">
           <Row>
             <Col size="md-12">
               <h2>ABOUT ADOPTABLE</h2>

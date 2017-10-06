@@ -5,7 +5,11 @@ const mongoose = require("mongoose");
 const routes = require("./routes/api");
 const scrapeRoutes = require("./routes/scraperoutes");
 // const postroutes = require("./routes/api/apiRoutes");
+// const corsPrefetch = require('cors-prefetch-middleware');
+// const imagesUpload = require('images-upload-middleware'); 
+
 const app = express();
+
 
 
 
@@ -16,6 +20,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
+// app.use(corsPrefetch);
+
+// app.post('/notmultiple', imagesUpload(
+//     './server/static/files',
+//     'http://localhost:3000/static/files'
+// ));
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;

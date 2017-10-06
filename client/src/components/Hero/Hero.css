@@ -31,3 +31,16 @@
   padding-top: 140px;
   margin-top: 0;
 }
+
+h1.thankYou{
+  padding-top: 25px;
+}
+
+button.returnHome{
+  left: 0;
+  top: 30px;
+}
+button.returnHomeBtn{
+  left: 180px;
+  top: -70px;
+}

@@ -35,7 +35,7 @@ button.google {
 	height: 38px;
 }
 
-.submitBtn {	
+button.submitBtn.btn.btn-lg.btn-default {	
 	color: white;
 	background-color: #eb6864;
 	border-color: #eb6864;

@@ -55,10 +55,10 @@ button.submitBtn {
 
 a>h2.header{
 	position: relative;
-    left: 30.5%;
-    margin-top: 9px;
+    left: 20%;
+    margin-top: 8px;
     margin-bottom: -48.5px;
-    width: 30%;
+    width: 0;
 }
 
 .navbar-brand.navbar-right {

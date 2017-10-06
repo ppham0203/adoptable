@@ -1,5 +1,4 @@
 const pet = require("../models/newpet");
-const submitPet = require("../models/petsubmission");
 const user = require("../models/newuser");
 
 // Defining methods for the booksController

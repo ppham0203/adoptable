@@ -4,6 +4,10 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes/api");
 const scrapeRoutes = require("./routes/scraperoutes");
+<<<<<<< HEAD
+const app = express();
+
+=======
 // const postroutes = require("./routes/api/apiRoutes");
 // const corsPrefetch = require('cors-prefetch-middleware');
 // const imagesUpload = require('images-upload-middleware'); 
@@ -13,6 +17,7 @@ const app = express();
 
 
 
+>>>>>>> master
 const PORT = process.env.PORT || 3001;
 
 // Configure body parser for AJAX requests
@@ -36,9 +41,6 @@ mongoose.connect(
     useMongoClient: true
   }
 );
-
-
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -48,14 +50,13 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 app.use(scrapeRoutes);
 
-
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

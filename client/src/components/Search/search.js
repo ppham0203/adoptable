@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import axios from 'axios';
 import SearchBar from '../Searchbar';
 import DogList from '../Doglist';
@@ -10,16 +10,16 @@ class Search extends React.Component {
     this.state = {
       dogs: [],
       breed: '',
-      gender:'',
-      filteredDogs: []    
+      gender: '',
+      filteredDogs: []
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.applySearchFilter = this.applySearchFilter.bind(this);
   }
 
-  componentDidMount(){
-    axios.get('/results').then( results => {
+  componentDidMount() {
+    axios.get('/api/adoptionPets/results').then(results => {
       console.log("Axios results", results);
       const dogs = results.data;
       const newState = {
@@ -28,9 +28,9 @@ class Search extends React.Component {
       this.setState(newState);
       this.applySearchFilter();
     });
-}
+  }
 
-  handleChange(event){
+  handleChange(event) {
     const name = event.target.name;
     const value = event.target.value
 
@@ -39,50 +39,44 @@ class Search extends React.Component {
   }
 
   applySearchFilter(event) {
-    if(event) { 
+    if (event) {
       event.preventDefault();
     }
-      const filteredDogs = this.state.dogs
-      .filter ( item => (this.state.gender !== '') ? item.gender.trim() == this.state.gender : true, this )
-      .filter( item => (this.state.breed !== '') ? item.breed.indexOf(this.state.breed)!=-1 : true, this )
-      console.log(filteredDogs);
-      console.log("this is awesome");
-      const newState = {
-        filteredDogs
-      }
-      this.setState(newState);
-      return filteredDogs;
+    const filteredDogs = this.state.dogs
+      .filter(item => (this.state.gender !== '') ? item.gender.trim() === this.state.gender : true, this)
+      .filter(item => (this.state.breed !== '') ? item.breed.indexOf(this.state.breed) !== -1 : true, this)
+    console.log(filteredDogs);
+    console.log("this is awesome");
+    const newState = {
+      filteredDogs
+    }
+    this.setState(newState);
+    return filteredDogs;
   }
-
 
   render() {
     return (
-        <div>
-          <SearchBar
-            breed={this.state.breed}
-            gender={this.state.gender}
-            handleChange={this.handleChange}
-          />
-          <Button className="btn-lg btn-group-lg btn"
-            bsSize="large" 
-            title="Search"
-            onClick={this.applySearchFilter}
-            type="success"
-          >
+      <div>
+        <SearchBar
+          breed={this.state.breed}
+          gender={this.state.gender}
+          handleChange={this.handleChange}
+        />
+        <Button className="btn-lg btn-group-lg btn"
+          bsSize="large"
+          title="Search"
+          onClick={this.applySearchFilter}
+          type="success"
+        >
           Filter
           </Button>
 
-          <DogList
-            dogs={this.state.filteredDogs}
-          />
-        </div>
+        <DogList
+          dogs={this.state.filteredDogs}
+        />
+      </div>
     );
   }
 }
 
 export default Search;
-
-
-
-
-

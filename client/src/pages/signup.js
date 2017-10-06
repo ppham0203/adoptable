@@ -52,7 +52,6 @@ class User extends Component {
             </Col>
           </Row>
         </Hero>
-        <h1 />
         <Container>
 
           <Row>

@@ -22,7 +22,8 @@ Sign Up Page and Login.
 
 
 Main Home Page with aggregated list of shelter animals all centrally located.
- ![alt text](client/src/assets/images/ScreenShot2.png)
+ ![alt text](client/src/assets/images/ScreenShot2a.png)
+ ![alt text](client/src/assets/images/ScreenShot2b.png)
 
 
 Posting a Pet.

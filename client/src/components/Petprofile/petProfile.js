@@ -1,29 +1,26 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import axios from 'axios';
 import API from '../../utils/API';
 import Nav from "../Nav";
 import "./petProfile.css";
-import Jumbotron from "../Jumbotron";
+
 
 class Petprofile extends Component {
   state = {
     dogs: {}
   };
- 
+
   componentDidMount() {
 
     API.getPet(this.props.match.params.id)
-    .then(res => this.setState({ dogs: res.data }))
-    .catch(err => console.log(err));
+      .then(res => this.setState({ dogs: res.data }))
+      .catch(err => console.log(err));
   }
-  
 
   render() {
     return (
-    <div>
-     <Nav />
+      <div>
+        <Nav />
         <Row>
           <Col size="md-12">
           </Col>

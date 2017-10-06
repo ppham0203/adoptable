@@ -5,7 +5,7 @@ import { Container, Row, Col } from "../components/Grid";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav"
 class thanks extends Component {
-  
+
   render() {
     return (
       <div>
@@ -30,7 +30,7 @@ class thanks extends Component {
               </Button></a>
                 
       </div>
-    ); 
+    );
   }
 }
 export default thanks;

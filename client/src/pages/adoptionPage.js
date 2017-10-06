@@ -22,7 +22,7 @@ class Adoption extends Component {
     breed: "",
     link: ""
   };
-  
+
 
   handleInputChange = event => {
 
@@ -35,19 +35,19 @@ class Adoption extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
-      API.savePet({
-        first_name: this.state.first_name,
-        last_name: this.state.last_name,
-        email: this.state.email,
-        phone: this.state.phone,
-        pet_name: this.state.pet_name,
-        gender: this.state.gender,
-        age: this.state.age,
-        weight: this.state.weight,
-        breed: this.state.breed,
-        
-      })    
+
+    API.savePet({
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      phone: this.state.phone,
+      pet_name: this.state.pet_name,
+      gender: this.state.gender,
+      age: this.state.age,
+      weight: this.state.weight,
+      breed: this.state.breed,
+
+    })
   };
 
   render() {
@@ -75,7 +75,7 @@ class Adoption extends Component {
                     <p>You want to avoid the animal shelters completely in all aspects of your adoption process.</p>
                     <h4>Submit your pet's information here and we will find them a forever home by adding them onto our list of adoptable pets on our homepage</h4>
                     <Col size="md-4">
-                    <Input
+                      <Input
                         name="first_name"
                         value={this.state.first_name}
                         onChange={this.handleInputChange}
@@ -105,7 +105,7 @@ class Adoption extends Component {
                         onChange={this.handleInputChange}
                         placeholder="Pet Name"
                       />
-                      
+
                       <Input
                         name="age"
                         value={this.state.age}
@@ -155,7 +155,7 @@ class Adoption extends Component {
                     <Uploader />
                     </Col>
                     <Col size="md-4">
-                      <iframe width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
+                      <iframe title="video" width="420" height="345" src="https://www.youtube.com/embed/08SLFf7mrwQ?autoplay=1">
                       </iframe>
                     </Col>
                   </Row>
@@ -165,8 +165,8 @@ class Adoption extends Component {
           </Row>
         </Container>
       </div>
-    ); 
+    );
   }
 }
-// disabled={!(this.state.first_name && this.state.last_name && this.state.email && this.statethis.state.pet_name && this.state.breed && this.state.gender && this.state.age && this.state.weight)}
+
 export default Adoption;

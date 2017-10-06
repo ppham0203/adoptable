@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import Button from 'react-bootstrap/lib/Button';
 import Hero from "../components/Hero";
-import { Container, Row, Col } from "../components/Grid";
-import { Link } from "react-router-dom";
+import { Row, Col } from "../components/Grid";
 import Nav from "../components/Nav";
 import Team from "../components/Team";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Jumbotron.css";
-import { Container, Row, Col } from "../Grid";
+import { Row, Col } from "../Grid";
 
 const Jumbotron = props => (
   <div className="jumbotron" style={{ backgroundImage: `url(${props.backgroundImage})` }}>   

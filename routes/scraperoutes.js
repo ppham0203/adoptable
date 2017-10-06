@@ -47,4 +47,10 @@ router.get("/api/scrape", function (req, res) {
   res.send("Scrape Complete");
 });
 
+<<<<<<< HEAD
 module.exports = router;  
+=======
+
+  module.exports = router;
+  
+>>>>>>> master

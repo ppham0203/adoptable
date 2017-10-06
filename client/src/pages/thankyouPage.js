@@ -10,14 +10,15 @@ class thanks extends Component {
     return (
       <div>
         <Nav />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+        <Hero backgroundImage="http://bravodog.ca/wp-content/uploads/2017/01/cropped-headergraphic2.jpg">
           <Row>
             <Col size="xs-9 sm-4">
-              <h1>Pet Adoptions</h1>
-              <h2>Find Your Friend a Forever Home</h2>
+              <h1 className="thankYou">Thank You For Posting Your Pet On Adoptable</h1>
+              <h2>Your best friend is one step closer to finding their forever home. </h2>
             </Col>
           </Row>
         </Hero>
+<<<<<<< HEAD
         <Container>
           <Row>
             <Col size="md-12">
@@ -34,6 +35,19 @@ class thanks extends Component {
             </Col>
           </Row>
         </Container>
+=======
+        
+          <a className="goHome" href="/"><Button className="returnHomeBtn" 
+                bsSize="large" 
+                title="Return Home"
+                // onClick={this.handleFormSubmit}
+                // type="success"
+                // className="input-lg"
+              >
+              Return Home
+              </Button></a>
+                
+>>>>>>> master
       </div>
     );
   }

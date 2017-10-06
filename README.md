@@ -1,42 +1,43 @@
-# Create React Express App
+# Adoptable
 
-## About This Boilerplate
+Welcome to Adoptable
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+A web based application that aggregates all the local shelter animals into one centralized location to make the process of searching for a pet easier and at the same time promoting adoption from shelters to reduce the amount of animlas that are euthanized annually.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+This application also allows users to "post" animals into our database so that in the event they have an animal that they need to give away, they have a platform to communicate with other users that are actively searching for pets. This provides another option for pet owners to find their animals loving homes without the need for giving their pets to animal shelters. 
 
-## Starting the app locally
+Technology used:
 
-Start by installing front and backend dependencies. While in this directory, run the following commands:
+- MERN Stack
+- NodeJS and Express Server
+- Mongo database with Mongoose ORM
+- ReactJS, CSS, Bootstrap
+- Web Scrape
+- User authentication and verification for application log in
+- MVC Interface
+- API Data Routing
 
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
+Sign Up Page and Login.
+ ![alt text](client/src/assets/images/ScreenShot1.png)
 
-After both installations complete, run the following command in your terminal:
 
-```
-yarn start
-```
+Main Home Page with aggregated list of shelter animals all centrally located.
+ ![alt text](client/src/assets/images/ScreenShot2.png)
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-## Deployment (Heroku)
+Posting a Pet.
+ ![alt text](client/src/assets/images/ScreenShot3.png)
 
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
 
-1. Build the React app for production by running the following command:
+Posted Pet is added to homepage with all animals that need adoption.
+ ![alt text](client/src/assets/images/ScreenShot4.png)
 
-```
-yarn build
-```
 
-2. Add and commit all changes to git
+Pet Profile Page where can get more information about a particular pet.
+ ![alt text](client/src/assets/images/ScreenShot5.png)
 
-3. Push to Heroku
 
-If all previous steps were followed correctly, your application should be deployed to Heroku!
+About Adoptable and meet the team that made it happen.
+ ![alt text](client/src/assets/images/ScreenShot6.png)
+
+ 

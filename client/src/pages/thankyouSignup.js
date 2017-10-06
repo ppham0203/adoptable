@@ -10,14 +10,20 @@ class thanks extends Component {
     return (
       <div>
         <Nav />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-          <Row>
+        <Hero backgroundImage="https://www.dogpeople.co.uk/_static/dog-friendly-holidays-04.jpg">
             <Col size="xs-9 sm-4">
-              <h1>Pet Adoptions</h1>
-              <h2>Find Your Friend a Forever Home</h2>
+              
+              <h1 className="thankYou">Thank you for signing up</h1>
+              <h2>You're only a few clicks away from finding your new best friend.</h2>
+              <Button className="returnHome"
+                bsSize="large" 
+                title="Return Home"
+              >
+              <Link className="submitBtn" to="/">Return Home</Link>
+              </Button>
             </Col>
-          </Row>
         </Hero>
+<<<<<<< HEAD
         <Container>
           <Row>
             <Col size="md-12">
@@ -34,6 +40,8 @@ class thanks extends Component {
             </Col>
           </Row>
         </Container>
+=======
+>>>>>>> master
       </div>
     );
   }

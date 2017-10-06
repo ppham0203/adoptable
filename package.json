@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "adoptable",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Adoptable",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
@@ -20,11 +20,14 @@
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
+    "cors-prefetch-middleware": "^1.0.0",
     "eslint-plugin-react": "^7.4.0",
     "express": "^4.15.4",
+    "images-upload-middleware": "^1.1.1",
     "mongoose": "^4.11.13",
     "react-bootstrap": "^0.31.3",
     "react-google-login": "^2.9.3",
+    "react-images-uploader": "^1.1.0",
     "react-router-dom": "^4.2.2",
     "request": "^2.83.0"
   }

@@ -14,9 +14,15 @@ class App extends Component {
     return (
       <div>
         <Nav />
+<<<<<<< HEAD
         <Jumbotron backgroundImage={require("../assets/images/doginpark.jpg")} />
         <Container>
           <Search />
+=======
+        <Jumbotron backgroundImage={require("../assets/images/dog-holding-leash.jpg")}/>
+        <Container>                   
+          <Search />    
+>>>>>>> master
         </Container>
       </div>
     );

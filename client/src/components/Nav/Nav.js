@@ -3,7 +3,7 @@ import "./Nav.css";
 import GoogleLogin from 'react-google-login';
 const responseGoogle = (response) => {
   console.log(response);
-} 
+}  
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
       <div className="navbar-brand">

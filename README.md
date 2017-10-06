@@ -18,7 +18,7 @@ Technology used:
 - API Data Routing
 
 Sign Up Page and Login.
- ![alt text](../assets/images/ScreenShot1.png)
+ ![alt text](client/src/assets/images/ScreenShot1.png)
 
 
 Main Home Page with aggregated list of shelter animals all centrally located.

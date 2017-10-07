@@ -1,8 +1,8 @@
-# Adoptable
+# Adoptable https://adoptable-dogs.herokuapp.com/
 
 Welcome to Adoptable
 
-A web based application that aggregates all the local shelter animals into one centralized location to make the process of searching for a pet easier and at the same time promoting adoption from shelters to reduce the amount of animlas that are euthanized annually.
+A web based application that aggregates all the local shelter animals into one centralized location to make the process of searching for a pet easier and at the same time promoting adoption from shelters to reduce the amount of animals that are euthanized annually.
 
 This application also allows users to "post" animals into our database so that in the event they have an animal that they need to give away, they have a platform to communicate with other users that are actively searching for pets. This provides another option for pet owners to find their animals loving homes without the need for giving their pets to animal shelters. 
 
